@@ -7,32 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6F18BEBE1C19C01A00E02B37 /* 0.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F18BEB41C19C01A00E02B37 /* 0.caf */; };
-		6F18BEBF1C19C01A00E02B37 /* 1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F18BEB51C19C01A00E02B37 /* 1.caf */; };
-		6F18BEC01C19C01A00E02B37 /* 2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F18BEB61C19C01A00E02B37 /* 2.caf */; };
-		6F18BEC11C19C01A00E02B37 /* 3.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F18BEB71C19C01A00E02B37 /* 3.caf */; };
-		6F18BEC21C19C01A00E02B37 /* 4.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F18BEB81C19C01A00E02B37 /* 4.caf */; };
-		6F18BEC31C19C01A00E02B37 /* 5.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F18BEB91C19C01A00E02B37 /* 5.caf */; };
-		6F18BEC41C19C01A00E02B37 /* 6.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F18BEBA1C19C01A00E02B37 /* 6.caf */; };
-		6F18BEC51C19C01A00E02B37 /* 7.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F18BEBB1C19C01A00E02B37 /* 7.caf */; };
-		6F18BEC61C19C01A00E02B37 /* 8.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F18BEBC1C19C01A00E02B37 /* 8.caf */; };
-		6F18BEC71C19C01A00E02B37 /* 9.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F18BEBD1C19C01A00E02B37 /* 9.caf */; };
-		6F18BED11C19D25700E02B37 /* bedop.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F18BECC1C19D25700E02B37 /* bedop.caf */; };
-		6F18BED21C19D25700E02B37 /* bedop.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F18BECC1C19D25700E02B37 /* bedop.caf */; };
-		6F18BED31C19D25700E02B37 /* bip.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F18BECD1C19D25700E02B37 /* bip.caf */; };
-		6F18BED41C19D25700E02B37 /* bip.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F18BECD1C19D25700E02B37 /* bip.caf */; };
-		6F18BED51C19D25700E02B37 /* bleep.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F18BECE1C19D25700E02B37 /* bleep.caf */; };
-		6F18BED61C19D25700E02B37 /* bleep.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F18BECE1C19D25700E02B37 /* bleep.caf */; };
-		6F18BED71C19D25700E02B37 /* bonk.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F18BECF1C19D25700E02B37 /* bonk.caf */; };
-		6F18BED81C19D25700E02B37 /* bonk.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F18BECF1C19D25700E02B37 /* bonk.caf */; };
+		6F0DD29A1C1A17D70073F969 /* bitdust2.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD2991C1A17D70073F969 /* bitdust2.ttf */; };
+		6F0DD2A91C1A17FA0073F969 /* bedop.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD29B1C1A17FA0073F969 /* bedop.caf */; };
+		6F0DD2AA1C1A17FA0073F969 /* bip.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD29C1C1A17FA0073F969 /* bip.caf */; };
+		6F0DD2AB1C1A17FA0073F969 /* bleep.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD29D1C1A17FA0073F969 /* bleep.caf */; };
+		6F0DD2AC1C1A17FA0073F969 /* bonk.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD29E1C1A17FA0073F969 /* bonk.caf */; };
+		6F0DD2AD1C1A17FA0073F969 /* 0.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD29F1C1A17FA0073F969 /* 0.caf */; };
+		6F0DD2AE1C1A17FA0073F969 /* 1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD2A01C1A17FA0073F969 /* 1.caf */; };
+		6F0DD2AF1C1A17FA0073F969 /* 2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD2A11C1A17FA0073F969 /* 2.caf */; };
+		6F0DD2B01C1A17FA0073F969 /* 3.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD2A21C1A17FA0073F969 /* 3.caf */; };
+		6F0DD2B11C1A17FA0073F969 /* 4.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD2A31C1A17FA0073F969 /* 4.caf */; };
+		6F0DD2B21C1A17FA0073F969 /* 5.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD2A41C1A17FA0073F969 /* 5.caf */; };
+		6F0DD2B31C1A17FA0073F969 /* 6.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD2A51C1A17FA0073F969 /* 6.caf */; };
+		6F0DD2B41C1A17FA0073F969 /* 7.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD2A61C1A17FA0073F969 /* 7.caf */; };
+		6F0DD2B51C1A17FA0073F969 /* 8.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD2A71C1A17FA0073F969 /* 8.caf */; };
+		6F0DD2B61C1A17FA0073F969 /* 9.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD2A81C1A17FA0073F969 /* 9.caf */; };
 		6F18BED91C19D25700E02B37 /* gameover.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F18BED01C19D25700E02B37 /* gameover.caf */; };
 		6F18BEDA1C19D25700E02B37 /* gameover.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F18BED01C19D25700E02B37 /* gameover.caf */; };
-		6FE337561C18BE61006CC1B2 /* bitdust2.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6FE337551C18BE61006CC1B2 /* bitdust2.ttf */; };
 		6FE337671C18D0E7006CC1B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE337661C18D0E7006CC1B2 /* AppDelegate.swift */; };
 		6FE337721C18D0E7006CC1B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FE337701C18D0E7006CC1B2 /* Main.storyboard */; };
 		6FE337741C18D0E7006CC1B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FE337731C18D0E7006CC1B2 /* Assets.xcassets */; };
 		6FE337791C18D10F006CC1B2 /* PongScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FFE7C781C1878E50043E721 /* PongScene.swift */; };
-		6FE3377B1C18D221006CC1B2 /* bitdust2.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6FE337551C18BE61006CC1B2 /* bitdust2.ttf */; };
 		6FE337891C18D24B006CC1B2 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE337881C18D24B006CC1B2 /* GameViewController.swift */; };
 		6FFE7C631C18773F0043E721 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FFE7C621C18773F0043E721 /* AppDelegate.swift */; };
 		6FFE7C691C18773F0043E721 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FFE7C681C18773F0043E721 /* GameViewController.swift */; };
@@ -44,22 +39,22 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6F18BEB41C19C01A00E02B37 /* 0.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 0.caf; sourceTree = "<group>"; };
-		6F18BEB51C19C01A00E02B37 /* 1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 1.caf; sourceTree = "<group>"; };
-		6F18BEB61C19C01A00E02B37 /* 2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 2.caf; sourceTree = "<group>"; };
-		6F18BEB71C19C01A00E02B37 /* 3.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 3.caf; sourceTree = "<group>"; };
-		6F18BEB81C19C01A00E02B37 /* 4.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 4.caf; sourceTree = "<group>"; };
-		6F18BEB91C19C01A00E02B37 /* 5.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 5.caf; sourceTree = "<group>"; };
-		6F18BEBA1C19C01A00E02B37 /* 6.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 6.caf; sourceTree = "<group>"; };
-		6F18BEBB1C19C01A00E02B37 /* 7.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 7.caf; sourceTree = "<group>"; };
-		6F18BEBC1C19C01A00E02B37 /* 8.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 8.caf; sourceTree = "<group>"; };
-		6F18BEBD1C19C01A00E02B37 /* 9.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 9.caf; sourceTree = "<group>"; };
-		6F18BECC1C19D25700E02B37 /* bedop.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = bedop.caf; sourceTree = "<group>"; };
-		6F18BECD1C19D25700E02B37 /* bip.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = bip.caf; sourceTree = "<group>"; };
-		6F18BECE1C19D25700E02B37 /* bleep.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = bleep.caf; sourceTree = "<group>"; };
-		6F18BECF1C19D25700E02B37 /* bonk.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = bonk.caf; sourceTree = "<group>"; };
+		6F0DD2991C1A17D70073F969 /* bitdust2.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = bitdust2.ttf; path = Pong/bitdust2.ttf; sourceTree = "<group>"; };
+		6F0DD29B1C1A17FA0073F969 /* bedop.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = bedop.caf; path = Pong/bedop.caf; sourceTree = "<group>"; };
+		6F0DD29C1C1A17FA0073F969 /* bip.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = bip.caf; path = Pong/bip.caf; sourceTree = "<group>"; };
+		6F0DD29D1C1A17FA0073F969 /* bleep.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = bleep.caf; path = Pong/bleep.caf; sourceTree = "<group>"; };
+		6F0DD29E1C1A17FA0073F969 /* bonk.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = bonk.caf; path = Pong/bonk.caf; sourceTree = "<group>"; };
+		6F0DD29F1C1A17FA0073F969 /* 0.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = 0.caf; path = Pong/0.caf; sourceTree = "<group>"; };
+		6F0DD2A01C1A17FA0073F969 /* 1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = 1.caf; path = Pong/1.caf; sourceTree = "<group>"; };
+		6F0DD2A11C1A17FA0073F969 /* 2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = 2.caf; path = Pong/2.caf; sourceTree = "<group>"; };
+		6F0DD2A21C1A17FA0073F969 /* 3.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = 3.caf; path = Pong/3.caf; sourceTree = "<group>"; };
+		6F0DD2A31C1A17FA0073F969 /* 4.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = 4.caf; path = Pong/4.caf; sourceTree = "<group>"; };
+		6F0DD2A41C1A17FA0073F969 /* 5.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = 5.caf; path = Pong/5.caf; sourceTree = "<group>"; };
+		6F0DD2A51C1A17FA0073F969 /* 6.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = 6.caf; path = Pong/6.caf; sourceTree = "<group>"; };
+		6F0DD2A61C1A17FA0073F969 /* 7.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = 7.caf; path = Pong/7.caf; sourceTree = "<group>"; };
+		6F0DD2A71C1A17FA0073F969 /* 8.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = 8.caf; path = Pong/8.caf; sourceTree = "<group>"; };
+		6F0DD2A81C1A17FA0073F969 /* 9.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = 9.caf; path = Pong/9.caf; sourceTree = "<group>"; };
 		6F18BED01C19D25700E02B37 /* gameover.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gameover.caf; sourceTree = "<group>"; };
-		6FE337551C18BE61006CC1B2 /* bitdust2.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = bitdust2.ttf; sourceTree = "<group>"; };
 		6FE337641C18D0E7006CC1B2 /* PongTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PongTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FE337661C18D0E7006CC1B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6FE337711C18D0E7006CC1B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -96,12 +91,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6F0DD2B71C1A180A0073F969 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				6F0DD2991C1A17D70073F969 /* bitdust2.ttf */,
+			);
+			name = Font;
+			sourceTree = "<group>";
+		};
 		6F18BEC81C19C33F00E02B37 /* SharedResources */ = {
 			isa = PBXGroup;
 			children = (
-				6FE337551C18BE61006CC1B2 /* bitdust2.ttf */,
-				6F18BEDB1C19D26200E02B37 /* sounds-b */,
-				6F18BECB1C19D24400E02B37 /* sounds-a */,
+				6F0DD2B71C1A180A0073F969 /* Font */,
+				6F18BEDB1C19D26200E02B37 /* sounds */,
 			);
 			name = SharedResources;
 			sourceTree = "<group>";
@@ -122,33 +124,26 @@
 			name = SharedScene;
 			sourceTree = "<group>";
 		};
-		6F18BECB1C19D24400E02B37 /* sounds-a */ = {
+		6F18BEDB1C19D26200E02B37 /* sounds */ = {
 			isa = PBXGroup;
 			children = (
-				6F18BEB41C19C01A00E02B37 /* 0.caf */,
-				6F18BEB51C19C01A00E02B37 /* 1.caf */,
-				6F18BEB61C19C01A00E02B37 /* 2.caf */,
-				6F18BEB71C19C01A00E02B37 /* 3.caf */,
-				6F18BEB81C19C01A00E02B37 /* 4.caf */,
-				6F18BEB91C19C01A00E02B37 /* 5.caf */,
-				6F18BEBA1C19C01A00E02B37 /* 6.caf */,
-				6F18BEBB1C19C01A00E02B37 /* 7.caf */,
-				6F18BEBC1C19C01A00E02B37 /* 8.caf */,
-				6F18BEBD1C19C01A00E02B37 /* 9.caf */,
-			);
-			name = "sounds-a";
-			sourceTree = "<group>";
-		};
-		6F18BEDB1C19D26200E02B37 /* sounds-b */ = {
-			isa = PBXGroup;
-			children = (
-				6F18BECC1C19D25700E02B37 /* bedop.caf */,
-				6F18BECD1C19D25700E02B37 /* bip.caf */,
-				6F18BECE1C19D25700E02B37 /* bleep.caf */,
-				6F18BECF1C19D25700E02B37 /* bonk.caf */,
 				6F18BED01C19D25700E02B37 /* gameover.caf */,
+				6F0DD29B1C1A17FA0073F969 /* bedop.caf */,
+				6F0DD29C1C1A17FA0073F969 /* bip.caf */,
+				6F0DD29D1C1A17FA0073F969 /* bleep.caf */,
+				6F0DD29E1C1A17FA0073F969 /* bonk.caf */,
+				6F0DD29F1C1A17FA0073F969 /* 0.caf */,
+				6F0DD2A01C1A17FA0073F969 /* 1.caf */,
+				6F0DD2A11C1A17FA0073F969 /* 2.caf */,
+				6F0DD2A21C1A17FA0073F969 /* 3.caf */,
+				6F0DD2A31C1A17FA0073F969 /* 4.caf */,
+				6F0DD2A41C1A17FA0073F969 /* 5.caf */,
+				6F0DD2A51C1A17FA0073F969 /* 6.caf */,
+				6F0DD2A61C1A17FA0073F969 /* 7.caf */,
+				6F0DD2A71C1A17FA0073F969 /* 8.caf */,
+				6F0DD2A81C1A17FA0073F969 /* 9.caf */,
 			);
-			name = "sounds-b";
+			name = sounds;
 			sourceTree = "<group>";
 		};
 		6FE337651C18D0E7006CC1B2 /* PongTV */ = {
@@ -281,13 +276,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6FE337721C18D0E7006CC1B2 /* Main.storyboard in Resources */,
-				6F18BED41C19D25700E02B37 /* bip.caf in Resources */,
 				6F18BEDA1C19D25700E02B37 /* gameover.caf in Resources */,
-				6F18BED81C19D25700E02B37 /* bonk.caf in Resources */,
-				6FE3377B1C18D221006CC1B2 /* bitdust2.ttf in Resources */,
 				6FE337741C18D0E7006CC1B2 /* Assets.xcassets in Resources */,
-				6F18BED21C19D25700E02B37 /* bedop.caf in Resources */,
-				6F18BED61C19D25700E02B37 /* bleep.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,25 +285,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F18BEC71C19C01A00E02B37 /* 9.caf in Resources */,
-				6F18BEC51C19C01A00E02B37 /* 7.caf in Resources */,
-				6F18BED51C19D25700E02B37 /* bleep.caf in Resources */,
-				6F18BEC41C19C01A00E02B37 /* 6.caf in Resources */,
-				6F18BED11C19D25700E02B37 /* bedop.caf in Resources */,
-				6F18BEC61C19C01A00E02B37 /* 8.caf in Resources */,
-				6F18BEC11C19C01A00E02B37 /* 3.caf in Resources */,
-				6F18BEC01C19C01A00E02B37 /* 2.caf in Resources */,
-				6F18BEBF1C19C01A00E02B37 /* 1.caf in Resources */,
-				6F18BEC21C19C01A00E02B37 /* 4.caf in Resources */,
-				6F18BEC31C19C01A00E02B37 /* 5.caf in Resources */,
+				6F0DD2B01C1A17FA0073F969 /* 3.caf in Resources */,
+				6F0DD2B41C1A17FA0073F969 /* 7.caf in Resources */,
+				6F0DD2B21C1A17FA0073F969 /* 5.caf in Resources */,
+				6F0DD2B11C1A17FA0073F969 /* 4.caf in Resources */,
+				6F0DD2AD1C1A17FA0073F969 /* 0.caf in Resources */,
+				6F0DD2AC1C1A17FA0073F969 /* bonk.caf in Resources */,
+				6F0DD2AF1C1A17FA0073F969 /* 2.caf in Resources */,
 				6F18BED91C19D25700E02B37 /* gameover.caf in Resources */,
-				6F18BED31C19D25700E02B37 /* bip.caf in Resources */,
+				6F0DD2B61C1A17FA0073F969 /* 9.caf in Resources */,
+				6F0DD29A1C1A17D70073F969 /* bitdust2.ttf in Resources */,
+				6F0DD2AB1C1A17FA0073F969 /* bleep.caf in Resources */,
+				6F0DD2AA1C1A17FA0073F969 /* bip.caf in Resources */,
+				6F0DD2A91C1A17FA0073F969 /* bedop.caf in Resources */,
 				6FFE7C711C18773F0043E721 /* LaunchScreen.storyboard in Resources */,
-				6FE337561C18BE61006CC1B2 /* bitdust2.ttf in Resources */,
 				6FFE7C6E1C18773F0043E721 /* Assets.xcassets in Resources */,
+				6F0DD2AE1C1A17FA0073F969 /* 1.caf in Resources */,
 				6FFE7C6C1C18773F0043E721 /* Main.storyboard in Resources */,
-				6F18BED71C19D25700E02B37 /* bonk.caf in Resources */,
-				6F18BEBE1C19C01A00E02B37 /* 0.caf in Resources */,
+				6F0DD2B51C1A17FA0073F969 /* 8.caf in Resources */,
+				6F0DD2B31C1A17FA0073F969 /* 6.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
