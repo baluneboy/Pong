@@ -35,6 +35,22 @@
 		6FFE7C711C18773F0043E721 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FFE7C6F1C18773F0043E721 /* LaunchScreen.storyboard */; };
 		6FFE7C791C1878E50043E721 /* PongScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FFE7C781C1878E50043E721 /* PongScene.swift */; };
 		6FFE7C7B1C187B370043E721 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FFE7C7A1C187B370043E721 /* SpriteKit.framework */; };
+		9B5E8FDF1C1A32560097890D /* bedop.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD29B1C1A17FA0073F969 /* bedop.caf */; };
+		9B5E8FE01C1A32560097890D /* gameover.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD2B81C1A18D50073F969 /* gameover.caf */; };
+		9B5E8FE11C1A32560097890D /* bip.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD29C1C1A17FA0073F969 /* bip.caf */; };
+		9B5E8FE21C1A32560097890D /* bleep.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD29D1C1A17FA0073F969 /* bleep.caf */; };
+		9B5E8FE31C1A32560097890D /* bonk.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD29E1C1A17FA0073F969 /* bonk.caf */; };
+		9B5E8FE41C1A32560097890D /* 0.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD29F1C1A17FA0073F969 /* 0.caf */; };
+		9B5E8FE51C1A32560097890D /* 1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD2A01C1A17FA0073F969 /* 1.caf */; };
+		9B5E8FE61C1A32560097890D /* 2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD2A11C1A17FA0073F969 /* 2.caf */; };
+		9B5E8FE71C1A32560097890D /* 3.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD2A21C1A17FA0073F969 /* 3.caf */; };
+		9B5E8FE81C1A32560097890D /* 4.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD2A31C1A17FA0073F969 /* 4.caf */; };
+		9B5E8FE91C1A32560097890D /* 5.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD2A41C1A17FA0073F969 /* 5.caf */; };
+		9B5E8FEA1C1A32560097890D /* 6.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD2A51C1A17FA0073F969 /* 6.caf */; };
+		9B5E8FEB1C1A32560097890D /* 7.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD2A61C1A17FA0073F969 /* 7.caf */; };
+		9B5E8FEC1C1A32560097890D /* 8.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD2A71C1A17FA0073F969 /* 8.caf */; };
+		9B5E8FED1C1A32560097890D /* 9.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD2A81C1A17FA0073F969 /* 9.caf */; };
+		9B5E8FEE1C1A32980097890D /* bitdust2.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD2991C1A17D70073F969 /* bitdust2.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -274,8 +290,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B5E8FEB1C1A32560097890D /* 7.caf in Resources */,
+				9B5E8FEE1C1A32980097890D /* bitdust2.ttf in Resources */,
+				9B5E8FE71C1A32560097890D /* 3.caf in Resources */,
+				9B5E8FDF1C1A32560097890D /* bedop.caf in Resources */,
+				9B5E8FED1C1A32560097890D /* 9.caf in Resources */,
+				9B5E8FE11C1A32560097890D /* bip.caf in Resources */,
 				6FE337721C18D0E7006CC1B2 /* Main.storyboard in Resources */,
+				9B5E8FEC1C1A32560097890D /* 8.caf in Resources */,
+				9B5E8FE91C1A32560097890D /* 5.caf in Resources */,
+				9B5E8FEA1C1A32560097890D /* 6.caf in Resources */,
+				9B5E8FE51C1A32560097890D /* 1.caf in Resources */,
+				9B5E8FE01C1A32560097890D /* gameover.caf in Resources */,
+				9B5E8FE61C1A32560097890D /* 2.caf in Resources */,
 				6FE337741C18D0E7006CC1B2 /* Assets.xcassets in Resources */,
+				9B5E8FE41C1A32560097890D /* 0.caf in Resources */,
+				9B5E8FE81C1A32560097890D /* 4.caf in Resources */,
+				9B5E8FE31C1A32560097890D /* bonk.caf in Resources */,
+				9B5E8FE21C1A32560097890D /* bleep.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

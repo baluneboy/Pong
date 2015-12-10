@@ -17,9 +17,15 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
     
     var magicWidth: CGFloat!
 
-    let ballCategory: UInt32 = 0x1 << 0
-    let cornerCategory: UInt32 = 0x1 << 1
-    let paddleCategory: UInt32 = 0x1 << 2
+    enum ColliderType: UInt32 {
+        case ballCategory = 1
+        case cornerCategory = 2
+        case paddleCategory = 4
+    }
+
+//    let ballCategory: UInt32 = 0x1 << 0
+//    let cornerCategory: UInt32 = 0x1 << 1
+//    let paddleCategory: UInt32 = 0x1 << 2
     
     var isPlaying: Bool = false
 
@@ -73,9 +79,9 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
         p1PaddleNode.position = CGPointMake(p1PaddleNode.size.width + marginWidth, CGRectGetMidY(frame))
         p2PaddleNode.position = CGPointMake(CGRectGetMaxX(frame) - p2PaddleNode.size.width - marginWidth, CGRectGetMidY(frame))
         p1PaddleNode.physicsBody = SKPhysicsBody.init(rectangleOfSize: p1PaddleNode.size)
-        p1PaddleNode.physicsBody!.categoryBitMask = paddleCategory
+        p1PaddleNode.physicsBody!.categoryBitMask = ColliderType.paddleCategory.rawValue
         p2PaddleNode.physicsBody = SKPhysicsBody.init(rectangleOfSize: p2PaddleNode.size)
-        p2PaddleNode.physicsBody!.categoryBitMask = paddleCategory
+        p2PaddleNode.physicsBody!.categoryBitMask = ColliderType.paddleCategory.rawValue
         p1PaddleNode.physicsBody!.dynamic = false
         p2PaddleNode.physicsBody!.dynamic = false
         addChild(p1PaddleNode)
@@ -154,7 +160,7 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
         physicsWorld.gravity = CGVectorMake(0, 0)
         
         physicsBody = SKPhysicsBody.init(edgeLoopFromRect: frame)
-        physicsBody!.categoryBitMask = cornerCategory
+        physicsBody!.categoryBitMask = ColliderType.cornerCategory.rawValue
         
         physicsBody!.dynamic = false
         physicsBody!.friction = 0.0
@@ -194,8 +200,8 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
         
         ballNode.size = CGSizeMake(ballWidth, ballHeight)
         ballNode.physicsBody = SKPhysicsBody.init(circleOfRadius: ballRadius)
-        ballNode.physicsBody!.categoryBitMask = ballCategory
-        ballNode.physicsBody!.contactTestBitMask = cornerCategory | paddleCategory
+        ballNode.physicsBody!.categoryBitMask = ColliderType.ballCategory.rawValue
+        ballNode.physicsBody!.contactTestBitMask = ColliderType.cornerCategory.rawValue | ColliderType.paddleCategory.rawValue
         ballNode.physicsBody!.linearDamping = 0.0
         ballNode.physicsBody!.angularDamping = 0.0
         ballNode.physicsBody!.restitution = 1.0
@@ -340,7 +346,7 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
                 secondBody = contact.bodyA
             }
             
-            if firstBody.categoryBitMask == ballCategory && secondBody.categoryBitMask == cornerCategory {
+            if firstBody.categoryBitMask == ColliderType.ballCategory.rawValue && secondBody.categoryBitMask == ColliderType.cornerCategory.rawValue {
                 if firstBody.node!.position.x <= firstBody.node!.frame.size.width + magicWidth {
                     print("ball scored on left")
                     pointForPlayer(2)
@@ -371,7 +377,7 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
                 //ball touched paddle
                 //the english seems a bit off from the original 
                 //game, can we make that better?
-                if firstBody.categoryBitMask == ballCategory && secondBody.categoryBitMask == paddleCategory {
+                if firstBody.categoryBitMask == ColliderType.ballCategory.rawValue && secondBody.categoryBitMask == ColliderType.paddleCategory.rawValue {
                     
                     let paddleNode = secondBody.node as! SKSpriteNode
                     
