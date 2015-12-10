@@ -22,8 +22,7 @@
 		6F0DD2B41C1A17FA0073F969 /* 7.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD2A61C1A17FA0073F969 /* 7.caf */; };
 		6F0DD2B51C1A17FA0073F969 /* 8.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD2A71C1A17FA0073F969 /* 8.caf */; };
 		6F0DD2B61C1A17FA0073F969 /* 9.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD2A81C1A17FA0073F969 /* 9.caf */; };
-		6F18BED91C19D25700E02B37 /* gameover.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F18BED01C19D25700E02B37 /* gameover.caf */; };
-		6F18BEDA1C19D25700E02B37 /* gameover.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F18BED01C19D25700E02B37 /* gameover.caf */; };
+		6F0DD2B91C1A18D50073F969 /* gameover.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD2B81C1A18D50073F969 /* gameover.caf */; };
 		6FE337671C18D0E7006CC1B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE337661C18D0E7006CC1B2 /* AppDelegate.swift */; };
 		6FE337721C18D0E7006CC1B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FE337701C18D0E7006CC1B2 /* Main.storyboard */; };
 		6FE337741C18D0E7006CC1B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FE337731C18D0E7006CC1B2 /* Assets.xcassets */; };
@@ -54,7 +53,7 @@
 		6F0DD2A61C1A17FA0073F969 /* 7.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = 7.caf; path = Pong/7.caf; sourceTree = "<group>"; };
 		6F0DD2A71C1A17FA0073F969 /* 8.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = 8.caf; path = Pong/8.caf; sourceTree = "<group>"; };
 		6F0DD2A81C1A17FA0073F969 /* 9.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = 9.caf; path = Pong/9.caf; sourceTree = "<group>"; };
-		6F18BED01C19D25700E02B37 /* gameover.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gameover.caf; sourceTree = "<group>"; };
+		6F0DD2B81C1A18D50073F969 /* gameover.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = gameover.caf; path = Pong/gameover.caf; sourceTree = "<group>"; };
 		6FE337641C18D0E7006CC1B2 /* PongTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PongTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FE337661C18D0E7006CC1B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6FE337711C18D0E7006CC1B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -127,8 +126,8 @@
 		6F18BEDB1C19D26200E02B37 /* sounds */ = {
 			isa = PBXGroup;
 			children = (
-				6F18BED01C19D25700E02B37 /* gameover.caf */,
 				6F0DD29B1C1A17FA0073F969 /* bedop.caf */,
+				6F0DD2B81C1A18D50073F969 /* gameover.caf */,
 				6F0DD29C1C1A17FA0073F969 /* bip.caf */,
 				6F0DD29D1C1A17FA0073F969 /* bleep.caf */,
 				6F0DD29E1C1A17FA0073F969 /* bonk.caf */,
@@ -276,7 +275,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6FE337721C18D0E7006CC1B2 /* Main.storyboard in Resources */,
-				6F18BEDA1C19D25700E02B37 /* gameover.caf in Resources */,
 				6FE337741C18D0E7006CC1B2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,11 +290,11 @@
 				6F0DD2AD1C1A17FA0073F969 /* 0.caf in Resources */,
 				6F0DD2AC1C1A17FA0073F969 /* bonk.caf in Resources */,
 				6F0DD2AF1C1A17FA0073F969 /* 2.caf in Resources */,
-				6F18BED91C19D25700E02B37 /* gameover.caf in Resources */,
 				6F0DD2B61C1A17FA0073F969 /* 9.caf in Resources */,
 				6F0DD29A1C1A17D70073F969 /* bitdust2.ttf in Resources */,
 				6F0DD2AB1C1A17FA0073F969 /* bleep.caf in Resources */,
 				6F0DD2AA1C1A17FA0073F969 /* bip.caf in Resources */,
+				6F0DD2B91C1A18D50073F969 /* gameover.caf in Resources */,
 				6F0DD2A91C1A17FA0073F969 /* bedop.caf in Resources */,
 				6FFE7C711C18773F0043E721 /* LaunchScreen.storyboard in Resources */,
 				6FFE7C6E1C18773F0043E721 /* Assets.xcassets in Resources */,
