@@ -242,11 +242,11 @@
 				TargetAttributes = {
 					6FE337631C18D0E7006CC1B2 = {
 						CreatedOnToolsVersion = 7.1.1;
-						DevelopmentTeam = N8V443ARD2;
+						DevelopmentTeam = D4V23AZF66;
 					};
 					6FFE7C5E1C18773F0043E721 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = N8V443ARD2;
+						DevelopmentTeam = D4V23AZF66;
 					};
 				};
 			};
@@ -485,7 +485,7 @@
 				INFOPLIST_FILE = PongTV/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.oeinc.Pong;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oeinc.PongTV;
 				PRODUCT_NAME = Pong;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -499,7 +499,7 @@
 				INFOPLIST_FILE = PongTV/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.oeinc.Pong;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oeinc.PongTV;
 				PRODUCT_NAME = Pong;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
