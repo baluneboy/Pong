@@ -18,15 +18,12 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
     var magicWidth: CGFloat!
 
     enum ColliderType: UInt32 {
-        case ballCategory = 1
-        case cornerCategory = 2
-        case paddleCategory = 4
+        case ballCategory = 0
+        case cornerCategory = 1
+        case paddleCategory = 2
+        case newCategory = 4
     }
 
-//    let ballCategory: UInt32 = 0x1 << 0
-//    let cornerCategory: UInt32 = 0x1 << 1
-//    let paddleCategory: UInt32 = 0x1 << 2
-    
     var isPlaying: Bool = false
 
     var ballNode:SKSpriteNode!
@@ -60,7 +57,7 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
         magicWidth = size.width / 70 // 72?
         
         setupPhysics()
-        setupSounds()
+        setupSoundsa()
         drawUI()
     }
     
@@ -124,6 +121,7 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
         }
         
         drawScore()
+        serveBall()
     }
     
     func setupSounds() {
@@ -143,7 +141,7 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
     func setupSoundsa() {
         serveSound = SKAction.playSoundFileNamed("0.caf", waitForCompletion: false)
         gameOverSound = SKAction.playSoundFileNamed("2.caf", waitForCompletion: false)
-        scoreSound = SKAction.playSoundFileNamed("4.caf", waitForCompletion: false)
+        scoreSound = SKAction.playSoundFileNamed("bonk.caf", waitForCompletion: false)
         
         paddleSound2 = SKAction.playSoundFileNamed("3.caf", waitForCompletion: false)
         paddleSound1 = SKAction.playSoundFileNamed("5.caf", waitForCompletion: false)
