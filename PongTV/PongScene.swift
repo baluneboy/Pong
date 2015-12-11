@@ -54,7 +54,7 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
     convenience init(size: CGSize, controlStyle:String!) {
         self.init(size: size)
         
-        magicWidth = size.width / 70 // 72?
+        magicWidth = size.width / 70 // 72? 60 is up close and 80 is small looking
         
         setupPhysics()
         setupSoundsa()
@@ -171,9 +171,6 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
     
     func serve() {
         runAction(serveSound)
-
-        p1PaddleNode.hidden = false
-        p2PaddleNode.hidden = false
 
         isPlaying = true
         gameOverNode.hidden = true
@@ -358,15 +355,15 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
                     }
                     else {
                         print("ball bounced off wall")
-                        let rand = Int(arc4random_uniform(3))
-                        if rand == 0 {
+                        switch Int(arc4random_uniform(3)) {
+                        case 0:
                             runAction(wallSound)
-                        }
-                        if rand == 1 {
+                        case 1:
                             runAction(wallSound1)
-                        }
-                        if rand == 2 {
+                        case 2:
                             runAction(wallSound2)
+                        default:
+                            break
                         }
                     }
                 }
@@ -441,7 +438,7 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
     override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
         for touch: UITouch in touches {
             if isPlaying {
-                if p1PaddleTouch != nil && touch == p1PaddleTouch{
+                if p1PaddleTouch != nil && touch == p1PaddleTouch {
                     moveFirstPaddle()
                 }
                 if p2PaddleTouch != nil && touch == p2PaddleTouch {
