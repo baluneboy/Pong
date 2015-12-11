@@ -54,7 +54,7 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
     convenience init(size: CGSize, controlStyle:String!) {
         self.init(size: size)
         
-        magicWidth = size.width / 70 // 72? 60 is up close and 80 is small looking
+        magicWidth = size.width / 60 // 72? 60 is up close and 80 is small looking
         
         setupPhysics()
         setupSoundsa()
