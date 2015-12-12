@@ -399,7 +399,7 @@
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Pong/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.oeinc.PongTV;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oeinc.ping;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = appletvos;
@@ -417,7 +417,7 @@
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Pong/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.oeinc.PongTV;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oeinc.ping;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = appletvos;
@@ -517,7 +517,7 @@
 				INFOPLIST_FILE = PongTV/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.oeinc.PongTV;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oeinc.ping;
 				PRODUCT_NAME = Pong;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -531,7 +531,7 @@
 				INFOPLIST_FILE = PongTV/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.oeinc.PongTV;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oeinc.ping;
 				PRODUCT_NAME = Pong;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

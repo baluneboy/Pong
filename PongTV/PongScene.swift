@@ -54,7 +54,7 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
     convenience init(size: CGSize, controlStyle:String!) {
         self.init(size: size)
         
-        magicWidth = size.width / 60 // 72? 60 is up close and 80 is small looking
+        magicWidth = size.width / 70 // 72? 60 is up close and 80 is small looking
         
         setupPhysics()
         setupSoundsa()
@@ -310,7 +310,7 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
     
     func moveFirstPaddle() {
         let newLocation: CGPoint = p1PaddleTouch.locationInNode(self)
-        if newLocation.x > size.width / 2.0 {
+        if newLocation.x > size.width / 2.0 && UIDevice.currentDevice().userInterfaceIdiom != .TV {
             //finger is on the other player side
             return
         }
@@ -320,7 +320,7 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
     
     func moveSecondPaddle() {
         let newLocation: CGPoint = p2PaddleTouch.locationInNode(self)
-        if newLocation.x < size.width / 2.0 {
+        if newLocation.x < size.width / 2.0 && UIDevice.currentDevice().userInterfaceIdiom != .TV {
             //finger is on the other player side
             return
         }
