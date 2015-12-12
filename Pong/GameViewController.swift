@@ -11,6 +11,8 @@ import SpriteKit
 
 class GameViewController: UIViewController {
 
+    var scene:PongScene!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -18,9 +20,19 @@ class GameViewController: UIViewController {
             skView.showsFPS = false
             skView.showsNodeCount = false
             
-            let scene: SKScene = PongScene.init(size: skView.bounds.size,controlStyle: nil)
+            scene = PongScene.init(size: skView.bounds.size,controlStyle: nil)
             scene.scaleMode = .AspectFill
             skView.presentScene(scene)
         }
+    }
+
+    override func pressesBegan(presses: Set<UIPress>, withEvent event: UIPressesEvent?) {
+        super.pressesBegan(presses, withEvent: event)
+        scene.pressesBegan(presses, withEvent: event)
+    }
+    
+    override func pressesEnded(presses: Set<UIPress>, withEvent event: UIPressesEvent?) {
+        super.pressesEnded(presses, withEvent: event)
+        scene.pressesEnded(presses, withEvent: event)
     }
 }

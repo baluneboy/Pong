@@ -284,6 +284,10 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
     
     func accelerateBall() {
         // and some random 'english'
+        if view?.paused == true {
+            return
+        }
+        
         let velocity = 1.18 as CGFloat
         let velocityX: CGFloat = ballNode.physicsBody!.velocity.dx * velocity + CGFloat(arc4random_uniform(50) * UInt32(0.1))
         let velocityY: CGFloat = ballNode.physicsBody!.velocity.dy * velocity + CGFloat(arc4random_uniform(50) * UInt32(0.1))
@@ -402,9 +406,40 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
+    func playPause() {
+        if view!.paused == true {
+            view!.paused = false;
+        } else {
+            view!.paused = true;
+        }
+    }
+    
+    override func pressesBegan(presses: Set<UIPress>, withEvent event: UIPressesEvent?) {
+        print("Press began")
+        for item in presses {
+            if item.type == .PlayPause {
+                print("PlayPause")
+                if isPlaying == true {
+                    playPause()
+                } else {
+                    restartGame()
+                }
+            }
+        }
+    }
+    
+    override func pressesEnded(presses: Set<UIPress>, withEvent event: UIPressesEvent?) {
+        for item in presses {
+            if item.type == UIPressType.Select {
+                //
+            }
+        }
+    }
+
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         if isPlaying {
             for touch: UITouch in touches {
+
                 if touch.tapCount == 2 {
                     restartGame()
                     return
@@ -412,6 +447,7 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
             
                 let location: CGPoint = touch.locationInNode(self)
                 if UIDevice.currentDevice().userInterfaceIdiom == .TV {
+                    view!.paused = false;
                     p1PaddleTouch = touch
                     p2PaddleTouch = touch
                 } else {
