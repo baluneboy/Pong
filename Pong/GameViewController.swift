@@ -17,7 +17,7 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         
         if let skView: SKView = view as? SKView {
-            skView.showsFPS = false
+            skView.showsFPS = true
             skView.showsNodeCount = false
             
             scene = PongScene.init(size: skView.bounds.size,controlStyle: nil)

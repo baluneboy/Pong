@@ -107,6 +107,11 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
         gameOverNode.text = "GAME OVER"
         addChild(gameOverNode)
         
+        let shader = SKShader(fileNamed: "TVShader.fsh")
+        //        shader.magicWidth = 16.0
+        p1PaddleNode.shader = shader
+        p2PaddleNode.shader = shader
+
         //net
         let lineWidth: CGFloat = magicWidth
         let lineHeight: CGFloat = magicWidth
@@ -115,6 +120,7 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
         var position: CGPoint = CGPointMake(size.width / 2.0, lineHeight * 1.5)
         for var i = 0; i < lines; i++ {
             let netNode: SKSpriteNode = SKSpriteNode.init(color: SKColor.whiteColor(), size: CGSizeMake(lineWidth, lineHeight))
+            netNode.shader = shader
             netNode.position = position
             position.y += 2 * lineHeight
             addChild(netNode)

@@ -23,6 +23,8 @@
 		6F0DD2B51C1A17FA0073F969 /* 8.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD2A71C1A17FA0073F969 /* 8.caf */; };
 		6F0DD2B61C1A17FA0073F969 /* 9.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD2A81C1A17FA0073F969 /* 9.caf */; };
 		6F0DD2B91C1A18D50073F969 /* gameover.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD2B81C1A18D50073F969 /* gameover.caf */; };
+		6FDCD6611C20B7A10038A16E /* TVShader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 6FDCD6601C20B7A10038A16E /* TVShader.fsh */; };
+		6FDCD6621C20B7A10038A16E /* TVShader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 6FDCD6601C20B7A10038A16E /* TVShader.fsh */; };
 		6FE337671C18D0E7006CC1B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE337661C18D0E7006CC1B2 /* AppDelegate.swift */; };
 		6FE337721C18D0E7006CC1B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FE337701C18D0E7006CC1B2 /* Main.storyboard */; };
 		6FE337741C18D0E7006CC1B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FE337731C18D0E7006CC1B2 /* Assets.xcassets */; };
@@ -70,6 +72,7 @@
 		6F0DD2A71C1A17FA0073F969 /* 8.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = 8.caf; path = Pong/8.caf; sourceTree = "<group>"; };
 		6F0DD2A81C1A17FA0073F969 /* 9.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = 9.caf; path = Pong/9.caf; sourceTree = "<group>"; };
 		6F0DD2B81C1A18D50073F969 /* gameover.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = gameover.caf; path = Pong/gameover.caf; sourceTree = "<group>"; };
+		6FDCD6601C20B7A10038A16E /* TVShader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = TVShader.fsh; sourceTree = "<group>"; };
 		6FE337641C18D0E7006CC1B2 /* PongTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PongTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FE337661C18D0E7006CC1B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6FE337711C18D0E7006CC1B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -134,6 +137,7 @@
 		6F18BECA1C19C7C200E02B37 /* SharedScene */ = {
 			isa = PBXGroup;
 			children = (
+				6FDCD6601C20B7A10038A16E /* TVShader.fsh */,
 				6FFE7C781C1878E50043E721 /* PongScene.swift */,
 			);
 			name = SharedScene;
@@ -299,6 +303,7 @@
 				6FE337721C18D0E7006CC1B2 /* Main.storyboard in Resources */,
 				9B5E8FEC1C1A32560097890D /* 8.caf in Resources */,
 				9B5E8FE91C1A32560097890D /* 5.caf in Resources */,
+				6FDCD6621C20B7A10038A16E /* TVShader.fsh in Resources */,
 				9B5E8FEA1C1A32560097890D /* 6.caf in Resources */,
 				9B5E8FE51C1A32560097890D /* 1.caf in Resources */,
 				9B5E8FE01C1A32560097890D /* gameover.caf in Resources */,
@@ -327,6 +332,7 @@
 				6F0DD2AB1C1A17FA0073F969 /* bleep.caf in Resources */,
 				6F0DD2AA1C1A17FA0073F969 /* bip.caf in Resources */,
 				6F0DD2B91C1A18D50073F969 /* gameover.caf in Resources */,
+				6FDCD6611C20B7A10038A16E /* TVShader.fsh in Resources */,
 				6F0DD2A91C1A17FA0073F969 /* bedop.caf in Resources */,
 				6FFE7C711C18773F0043E721 /* LaunchScreen.storyboard in Resources */,
 				6FFE7C6E1C18773F0043E721 /* Assets.xcassets in Resources */,
