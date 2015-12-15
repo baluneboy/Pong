@@ -15,6 +15,8 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
     
     let winScore = 24
     
+    let tvShader = SKShader(fileNamed: "TVShader.fsh")
+
     var magicWidth: CGFloat!
 
     enum ColliderType: UInt32 {
@@ -107,11 +109,34 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
         gameOverNode.text = "GAME OVER"
         addChild(gameOverNode)
         
-        let shader = SKShader(fileNamed: "TVShader.fsh")
         //        shader.magicWidth = 16.0
-        p1PaddleNode.shader = shader
-        p2PaddleNode.shader = shader
+        p1PaddleNode.shader = tvShader
+        p2PaddleNode.shader = tvShader
 
+//        gameOverNode!.blendMode = SKBlendMode.Multiply
+//        gameOverNode!.colorBlendFactor = 1.0
+//        
+//        let effectNode = SKEffectNode()
+//        effectNode.shader = tvShader
+//        effectNode.shouldEnableEffects = true
+//        effectNode.position = CGPointMake(size.width / 2.0, size.height / 3.0)
+//        addChild(effectNode)
+//        
+//        effectNode.addChild(gameOverNode)
+        
+        
+//        let textureView = SKView()
+//        let texture = textureView.textureFromNode(gameOverNode)
+//        texture!.filteringMode = .Linear
+//
+//        let spriteText = SKSpriteNode(texture: texture!)
+//        //spriteText.position = put me someplace good;
+//        spriteText.position = CGPointMake(size.width / 2.0, size.height / 3.0)
+//
+//        addChild(spriteText)
+
+        
+        
         //net
         let lineWidth: CGFloat = magicWidth
         let lineHeight: CGFloat = magicWidth
@@ -120,7 +145,7 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
         var position: CGPoint = CGPointMake(size.width / 2.0, lineHeight * 1.5)
         for var i = 0; i < lines; i++ {
             let netNode: SKSpriteNode = SKSpriteNode.init(color: SKColor.whiteColor(), size: CGSizeMake(lineWidth, lineHeight))
-            netNode.shader = shader
+            netNode.shader = tvShader
             netNode.position = position
             position.y += 2 * lineHeight
             addChild(netNode)
@@ -198,7 +223,8 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
         
         ballNode = SKSpriteNode.init()
         ballNode.color = SKColor.whiteColor()
-        
+        ballNode.shader = tvShader
+
         ballNode.size = CGSizeMake(ballWidth, ballHeight)
         ballNode.physicsBody = SKPhysicsBody.init(circleOfRadius: ballRadius)
         ballNode.physicsBody!.categoryBitMask = ColliderType.BallCategory.rawValue
