@@ -54,7 +54,7 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
     convenience init(size: CGSize, controlStyle:String!) {
         self.init(size: size)
         
-        magicWidth = size.width / 70 // 72? 60 is up close and 80 is small looking
+        magicWidth = size.width / 56 // 72? 60 is up close and 80 is small looking
         
         setupPhysics()
         setupSoundsa()
@@ -92,6 +92,7 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
         p2ScoreNode = SKLabelNode.init(fontNamed: font)
         p2ScoreNode.fontColor = SKColor.whiteColor()
         p1ScoreNode.fontColor = SKColor.whiteColor()
+                
         p1ScoreNode.fontSize = fontSize
         p2ScoreNode.fontSize = fontSize
         p1ScoreNode.position = CGPointMake(size.width * 0.38, size.height - fontSize)
@@ -186,14 +187,12 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
             ballNode.removeFromParent()
         }
         
-        let ballWidth: CGFloat = magicWidth
-        let ballHeight: CGFloat = magicWidth
         let ballRadius: CGFloat = magicWidth / 2
         
         ballNode = SKSpriteNode.init()
         ballNode.color = SKColor.whiteColor()
         
-        ballNode.size = CGSizeMake(ballWidth, ballHeight)
+        ballNode.size = CGSizeMake(magicWidth, magicWidth)
         ballNode.physicsBody = SKPhysicsBody.init(circleOfRadius: ballRadius)
         ballNode.physicsBody!.categoryBitMask = ColliderType.ballCategory.rawValue
         ballNode.physicsBody!.contactTestBitMask = ColliderType.cornerCategory.rawValue | ColliderType.paddleCategory.rawValue
@@ -259,10 +258,6 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
             break
         }
         
-        processPoint()
-    }
-    
-    func processPoint() {
         if p1Score == winScore || p2Score == winScore {
             gameOver()
         } else {
@@ -273,13 +268,22 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func gameOver() {
+        performSelector(Selector("runAction:"), withObject: gameOverSound, afterDelay: 0.38)
+
         hidePaddles()
         
-        performSelector(Selector("runAction:"), withObject: gameOverSound, afterDelay: 0.38)
         isPlaying = false
         gameOverNode.hidden = false
+        
         invalidateTimer()
         serveBall()
+    }
+    
+    func restartGame() {
+        if ballNode != nil {
+            resetGame()
+        }
+        serve()
     }
     
     func accelerateBall() {
@@ -312,7 +316,7 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
         paddle.position = CGPointMake(x, y)
     }
     
-    func moveFirstPaddle() {
+    func movePaddle1() {
         let newLocation: CGPoint = p1PaddleTouch.locationInNode(self)
         if newLocation.x > size.width / 2.0 && UIDevice.currentDevice().userInterfaceIdiom != .TV {
             //finger is on the other player side
@@ -322,7 +326,7 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
         movePadde(p1PaddleNode, previousLocation: previousLocation, newLocation: newLocation)
     }
     
-    func moveSecondPaddle() {
+    func movePaddle2() {
         let newLocation: CGPoint = p2PaddleTouch.locationInNode(self)
         if newLocation.x < size.width / 2.0 && UIDevice.currentDevice().userInterfaceIdiom != .TV {
             //finger is on the other player side
@@ -464,21 +468,14 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
-    func restartGame() {
-        if ballNode != nil {
-            resetGame()
-        }
-        serve()
-    }
-
     override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
         for touch: UITouch in touches {
             if isPlaying {
                 if p1PaddleTouch != nil && touch == p1PaddleTouch {
-                    moveFirstPaddle()
+                    movePaddle1()
                 }
                 if p2PaddleTouch != nil && touch == p2PaddleTouch {
-                    moveSecondPaddle()
+                    movePaddle2()
                 }
             }
         }

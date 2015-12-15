@@ -16,7 +16,10 @@ class GameViewController: UIViewController {
         if let skView: SKView = view as? SKView {
             skView.showsFPS = false
             skView.showsNodeCount = false
-            
+            let raster = UIImage(named: "raster")
+            skView.backgroundColor = UIColor(patternImage: raster!)
+//            p1ScoreNode.fontColor = UIColor(patternImage: raster!)
+
             //handle possible portrait rendering
             let w: CGFloat = skView.bounds.size.width
             let h: CGFloat = skView.bounds.size.height
@@ -27,6 +30,8 @@ class GameViewController: UIViewController {
             
             let scene: SKScene = PongScene.init(size: sceneSize, controlStyle: nil)
             scene.scaleMode = .AspectFill
+            scene.backgroundColor = UIColor(patternImage: raster!)
+
             skView.presentScene(scene)
         }
     }
