@@ -196,6 +196,9 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
         physicsBody!.restitution = 1.0
     }
     
+    override func didMoveToView(view: SKView) {
+    }
+    
     override func willMoveFromView(view: SKView) {
         gameOver()
     }
