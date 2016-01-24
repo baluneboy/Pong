@@ -8,8 +8,14 @@
 
 import UIKit
 import SpriteKit
+import GameController
 
 class GameViewController: UIViewController {
+
+    // Game controls
+    internal var controllerDPad: GCControllerDirectionPad?
+    internal var controllerStoredDirection = float2(0.0) // left/right up/down
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,6 +37,8 @@ class GameViewController: UIViewController {
             let scene: SKScene = PongScene.init(size: sceneSize, controlStyle: nil)
             scene.scaleMode = .AspectFill
             scene.backgroundColor = UIColor(patternImage: raster!)
+
+            setupGameControllers()
 
             skView.presentScene(scene)
         }
