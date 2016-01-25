@@ -371,6 +371,10 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
     }
 
     func didBeginContact(contact: SKPhysicsContact) {
+        let english: CGFloat = CGFloat(arc4random_uniform(20))
+        let dx: CGFloat = ballNode.physicsBody!.velocity.dx
+        let dy: CGFloat = ballNode.physicsBody!.velocity.dy
+
         if isPlaying {
             var firstBody: SKPhysicsBody = SKPhysicsBody()
             var secondBody: SKPhysicsBody = SKPhysicsBody()
@@ -418,12 +422,8 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
                     
                     let paddleNode = secondBody.node as! SKSpriteNode
                     
-                    let dx: CGFloat = ballNode.physicsBody!.velocity.dx
-                    let dy: CGFloat = ballNode.physicsBody!.velocity.dy
-
                     let paddleBottom: CGFloat = paddleNode.frame.origin.y
                     let hitPoint = ballNode.frame.origin.y + ballNode.frame.height / 2.0
-                    let english: CGFloat = CGFloat(arc4random_uniform(20))
                     
                     if hitPoint < paddleBottom + paddleNode.size.height / 3.0 {
                         print("ball hit paddle bottom")
@@ -441,6 +441,8 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
                     }
                 }
             }
+        } else {
+            ballNode.physicsBody!.velocity = CGVectorMake(english+dx, english+dy)
         }
     }
     
