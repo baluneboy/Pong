@@ -23,6 +23,8 @@
 		6F0DD2B51C1A17FA0073F969 /* 8.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD2A71C1A17FA0073F969 /* 8.caf */; };
 		6F0DD2B61C1A17FA0073F969 /* 9.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD2A81C1A17FA0073F969 /* 9.caf */; };
 		6F0DD2B91C1A18D50073F969 /* gameover.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD2B81C1A18D50073F969 /* gameover.caf */; };
+		6FB3E0D51C5684990076C266 /* Pong.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6FB3E0D41C5684990076C266 /* Pong.ttf */; };
+		6FB3E0D61C5684990076C266 /* Pong.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6FB3E0D41C5684990076C266 /* Pong.ttf */; };
 		6FDCD6611C20B7A10038A16E /* TVShader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 6FDCD6601C20B7A10038A16E /* TVShader.fsh */; };
 		6FDCD6621C20B7A10038A16E /* TVShader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 6FDCD6601C20B7A10038A16E /* TVShader.fsh */; };
 		6FE337671C18D0E7006CC1B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FE337661C18D0E7006CC1B2 /* AppDelegate.swift */; };
@@ -53,7 +55,6 @@
 		9B5E8FEC1C1A32560097890D /* 8.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD2A71C1A17FA0073F969 /* 8.caf */; };
 		9B5E8FED1C1A32560097890D /* 9.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD2A81C1A17FA0073F969 /* 9.caf */; };
 		9B5E8FEE1C1A32980097890D /* bitdust2.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD2991C1A17D70073F969 /* bitdust2.ttf */; };
-		9B7B8DB61C321CEE009FA506 /* GameControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7B8DB51C321CEE009FA506 /* GameControls.swift */; };
 		9B7B8DB71C321CEE009FA506 /* GameControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7B8DB51C321CEE009FA506 /* GameControls.swift */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +75,7 @@
 		6F0DD2A71C1A17FA0073F969 /* 8.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = 8.caf; path = Pong/8.caf; sourceTree = "<group>"; };
 		6F0DD2A81C1A17FA0073F969 /* 9.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = 9.caf; path = Pong/9.caf; sourceTree = "<group>"; };
 		6F0DD2B81C1A18D50073F969 /* gameover.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = gameover.caf; path = Pong/gameover.caf; sourceTree = "<group>"; };
+		6FB3E0D41C5684990076C266 /* Pong.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Pong.ttf; sourceTree = "<group>"; };
 		6FDCD6601C20B7A10038A16E /* TVShader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = TVShader.fsh; sourceTree = "<group>"; };
 		6FE337641C18D0E7006CC1B2 /* PongTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PongTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FE337661C18D0E7006CC1B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				6F0DD2991C1A17D70073F969 /* bitdust2.ttf */,
+				6FB3E0D41C5684990076C266 /* Pong.ttf */,
 			);
 			name = Font;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				9B5E8FE61C1A32560097890D /* 2.caf in Resources */,
 				6FE337741C18D0E7006CC1B2 /* Assets.xcassets in Resources */,
 				9B5E8FE41C1A32560097890D /* 0.caf in Resources */,
+				6FB3E0D61C5684990076C266 /* Pong.ttf in Resources */,
 				9B5E8FE81C1A32560097890D /* 4.caf in Resources */,
 				9B5E8FE31C1A32560097890D /* bonk.caf in Resources */,
 				9B5E8FE21C1A32560097890D /* bleep.caf in Resources */,
@@ -326,6 +330,7 @@
 				6F0DD2B01C1A17FA0073F969 /* 3.caf in Resources */,
 				6F0DD2B41C1A17FA0073F969 /* 7.caf in Resources */,
 				6F0DD2B21C1A17FA0073F969 /* 5.caf in Resources */,
+				6FB3E0D51C5684990076C266 /* Pong.ttf in Resources */,
 				6F0DD2B11C1A17FA0073F969 /* 4.caf in Resources */,
 				6F0DD2AD1C1A17FA0073F969 /* 0.caf in Resources */,
 				6F0DD2AC1C1A17FA0073F969 /* bonk.caf in Resources */,
@@ -367,7 +372,6 @@
 				6FFE7C791C1878E50043E721 /* PongScene.swift in Sources */,
 				6FFE7C691C18773F0043E721 /* GameViewController.swift in Sources */,
 				6FFE7C631C18773F0043E721 /* AppDelegate.swift in Sources */,
-				9B7B8DB61C321CEE009FA506 /* GameControls.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

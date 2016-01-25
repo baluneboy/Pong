@@ -34,7 +34,7 @@ class GameViewController: UIViewController {
             let scene: SKScene = PongScene.init(size: sceneSize, controlStyle: nil)
             scene.scaleMode = .AspectFill
 
-            setupGameControllers()
+            //setupGameControllers()
 
             skView.presentScene(scene)
         }

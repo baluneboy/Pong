@@ -56,7 +56,7 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
     convenience init(size: CGSize, controlStyle:String!) {
         self.init(size: size)
         
-        magicWidth = size.width / 56 // 72? 60 is up close and 80 is small looking
+        magicWidth = size.width / 70 // 72? 60 is up close and 80 is small looking
         
         setupPhysics()
         setupSoundsa()
@@ -88,7 +88,7 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
         
         //scores
         let fontSize: CGFloat = magicWidth * 6.8
-        let font = "BitDust Two"
+        let font = "Pong Regular"
 
         p1ScoreNode = SKLabelNode.init(fontNamed: font)
         p2ScoreNode = SKLabelNode.init(fontNamed: font)
@@ -97,8 +97,8 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
                 
         p1ScoreNode.fontSize = fontSize
         p2ScoreNode.fontSize = fontSize
-        p1ScoreNode.position = CGPointMake(size.width * 0.38, size.height - fontSize)
-        p2ScoreNode.position = CGPointMake(size.width * 0.62, size.height - fontSize)
+        p1ScoreNode.position = CGPointMake(size.width * 0.38, size.height - fontSize * 1.25)
+        p2ScoreNode.position = CGPointMake(size.width * 0.62, size.height - fontSize * 1.25)
         addChild(p1ScoreNode)
         addChild(p2ScoreNode)
         
@@ -453,7 +453,7 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
             view!.paused = true;
         }
     }
-    
+    /*
     func processControllerDirection() {
         
         let direction = GameViewController.controllerDirection(view!.window!.rootViewController as! GameViewController)
@@ -471,7 +471,7 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
     override func update(currentTime: CFTimeInterval) {
         processControllerDirection()
     }
-
+*/
     override func pressesBegan(presses: Set<UIPress>, withEvent event: UIPressesEvent?) {
         print("Press began")
         for item in presses {
