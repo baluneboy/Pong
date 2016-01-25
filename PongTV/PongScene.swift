@@ -454,6 +454,24 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
+    func processControllerDirection() {
+        
+        let direction = GameViewController.controllerDirection(view!.window!.rootViewController as! GameViewController)
+        print(direction().y)
+        //if direction().y > 0.2 || direction().y < -0.2 {
+//            let zeroToOne = CGFloat((direction().y + 1.0) * (direction().y + 1.0))
+            let yPosition = CGFloat(direction().y * 380 + 540)
+            movePadde(p1PaddleNode, previousLocation: p1PaddleNode.position, newLocation: CGPointMake(p1PaddleNode.position.x, yPosition))
+//            print(yPosition)
+//            p1PaddleNode.position = CGPointMake(p1PaddleNode.position.x, yPosition)
+        //}
+
+    }
+
+    override func update(currentTime: CFTimeInterval) {
+        processControllerDirection()
+    }
+
     override func pressesBegan(presses: Set<UIPress>, withEvent event: UIPressesEvent?) {
         print("Press began")
         for item in presses {
