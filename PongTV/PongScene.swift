@@ -90,7 +90,7 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
         
         //scores
         let fontSize: CGFloat = magicWidth * 6.8
-        let font = "BitDust Two"
+        let font = "Pong Regular"
 
         p1ScoreNode = SKLabelNode.init(fontNamed: font)
         p2ScoreNode = SKLabelNode.init(fontNamed: font)
@@ -99,8 +99,8 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
                 
         p1ScoreNode.fontSize = fontSize
         p2ScoreNode.fontSize = fontSize
-        p1ScoreNode.position = CGPointMake(size.width * 0.38, size.height - fontSize)
-        p2ScoreNode.position = CGPointMake(size.width * 0.62, size.height - fontSize)
+        p1ScoreNode.position = CGPointMake(size.width * 0.38, size.height - fontSize * 1.25)
+        p2ScoreNode.position = CGPointMake(size.width * 0.62, size.height - fontSize * 1.25)
         addChild(p1ScoreNode)
         addChild(p2ScoreNode)
         
@@ -382,6 +382,10 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
     }
 
     func didBeginContact(contact: SKPhysicsContact) {
+        let english: CGFloat = CGFloat(arc4random_uniform(20))
+        let dx: CGFloat = ballNode.physicsBody!.velocity.dx
+        let dy: CGFloat = ballNode.physicsBody!.velocity.dy
+
         if isPlaying {
             var firstBody: SKPhysicsBody = SKPhysicsBody()
             var secondBody: SKPhysicsBody = SKPhysicsBody()
@@ -429,12 +433,8 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
                     
                     let paddleNode = secondBody.node as! SKSpriteNode
                     
-                    let dx: CGFloat = ballNode.physicsBody!.velocity.dx
-                    let dy: CGFloat = ballNode.physicsBody!.velocity.dy
-
                     let paddleBottom: CGFloat = paddleNode.frame.origin.y
                     let hitPoint = ballNode.frame.origin.y + ballNode.frame.height / 2.0
-                    let english: CGFloat = CGFloat(arc4random_uniform(20))
                     
                     if hitPoint < paddleBottom + paddleNode.size.height / 3.0 {
                         print("ball hit paddle bottom")
@@ -452,6 +452,8 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
                     }
                 }
             }
+        } else {
+            ballNode.physicsBody!.velocity = CGVectorMake(english+dx, english+dy)
         }
     }
     
