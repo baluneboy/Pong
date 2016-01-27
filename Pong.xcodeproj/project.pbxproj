@@ -53,7 +53,6 @@
 		9B5E8FEC1C1A32560097890D /* 8.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD2A71C1A17FA0073F969 /* 8.caf */; };
 		9B5E8FED1C1A32560097890D /* 9.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD2A81C1A17FA0073F969 /* 9.caf */; };
 		9B5E8FEE1C1A32980097890D /* bitdust2.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD2991C1A17D70073F969 /* bitdust2.ttf */; };
-		9B7B8DB61C321CEE009FA506 /* GameControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7B8DB51C321CEE009FA506 /* GameControls.swift */; };
 		9B7B8DB71C321CEE009FA506 /* GameControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7B8DB51C321CEE009FA506 /* GameControls.swift */; };
 /* End PBXBuildFile section */
 
@@ -266,6 +265,7 @@
 				TargetAttributes = {
 					6FE337631C18D0E7006CC1B2 = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = D4V23AZF66;
 					};
 					6FFE7C5E1C18773F0043E721 = {
 						CreatedOnToolsVersion = 7.2;
@@ -367,7 +367,6 @@
 				6FFE7C791C1878E50043E721 /* PongScene.swift in Sources */,
 				6FFE7C691C18773F0043E721 /* GameViewController.swift in Sources */,
 				6FFE7C631C18773F0043E721 /* AppDelegate.swift in Sources */,
-				9B7B8DB61C321CEE009FA506 /* GameControls.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

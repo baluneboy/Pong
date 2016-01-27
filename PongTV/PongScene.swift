@@ -13,11 +13,11 @@ import SpriteKit
 
 class PongScene: SKScene, SKPhysicsContactDelegate {
     
-    let winScore = 24
+    let winScore = 1
     
     let tvShader = SKShader(fileNamed: "TVShader.fsh")
 
-    var magicWidth: CGFloat!
+    var magicWidth:CGFloat!
 
     enum ColliderType: UInt32 {
         case BallCategory = 0
@@ -56,18 +56,21 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
     convenience init(size: CGSize, controlStyle:String!) {
         self.init(size: size)
         
-        magicWidth = size.width / 56 // 72? 60 is up close and 80 is small looking
-        
+        magicWidth = size.width / 70
         setupPhysics()
         setupSoundsa()
         drawUI()
     }
     
-    func drawUI() {
+    func marginWidth() -> CGFloat {
         var marginWidth:CGFloat = magicWidth * 2
         if UIDevice.currentDevice().userInterfaceIdiom == .TV {
             marginWidth = 88
         }
+        return marginWidth
+    }
+    
+    func drawUI() {
         
         //paddles
         let paddleWidth: CGFloat = magicWidth
@@ -75,8 +78,6 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
         
         p1PaddleNode = SKSpriteNode.init(color: SKColor.whiteColor(), size: CGSizeMake(paddleWidth, paddleHeight))
         p2PaddleNode = SKSpriteNode.init(color: SKColor.whiteColor(), size: CGSizeMake(paddleWidth, paddleHeight))
-        p1PaddleNode.position = CGPointMake(p1PaddleNode.size.width + marginWidth, CGRectGetMidY(frame))
-        p2PaddleNode.position = CGPointMake(CGRectGetMaxX(frame) - p2PaddleNode.size.width - marginWidth, CGRectGetMidY(frame))
         p1PaddleNode.physicsBody = SKPhysicsBody.init(rectangleOfSize: p1PaddleNode.size)
         p1PaddleNode.physicsBody!.categoryBitMask = ColliderType.PaddleCategory.rawValue
         p2PaddleNode.physicsBody = SKPhysicsBody.init(rectangleOfSize: p2PaddleNode.size)
@@ -85,6 +86,7 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
         p2PaddleNode.physicsBody!.dynamic = false
         addChild(p1PaddleNode)
         addChild(p2PaddleNode)
+        hidePaddles()
         
         //scores
         let fontSize: CGFloat = magicWidth * 6.8
@@ -213,7 +215,7 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
         invalidateTimer()
         serveBall()
         
-        timer = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: "accelerateBall", userInfo: nil, repeats: true)
+        timer = NSTimer.scheduledTimerWithTimeInterval(3.8, target: self, selector: "accelerateBall", userInfo: nil, repeats: true)
     }
     
     func serveBall() {
@@ -304,13 +306,13 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
     func gameOver() {
         performSelector(Selector("runAction:"), withObject: gameOverSound, afterDelay: 0.38)
 
-        hidePaddles()
-        
         isPlaying = false
         gameOverNode.hidden = false
         
         invalidateTimer()
         serveBall()
+        
+        hidePaddles()
     }
     
     func restartGame() {
@@ -321,20 +323,29 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func accelerateBall() {
-        // and some random 'english'
         if view?.paused == true {
             return
         }
         
         let velocity = 1.18 as CGFloat
-        let velocityX: CGFloat = ballNode.physicsBody!.velocity.dx * velocity + CGFloat(arc4random_uniform(50) * UInt32(0.1))
-        let velocityY: CGFloat = ballNode.physicsBody!.velocity.dy * velocity + CGFloat(arc4random_uniform(50) * UInt32(0.1))
+        let velocityX: CGFloat = ballNode.physicsBody!.velocity.dx * velocity
+        // english
+        let velocityY: CGFloat = ballNode.physicsBody!.velocity.dy * velocity  + CGFloat(arc4random_uniform(50) * UInt32(0.1))
         ballNode.physicsBody!.velocity = CGVectorMake(velocityX, velocityY)
     }
     
     // turn on and off paddles during attract-mode
-    func showPaddles() {}
-    func hidePaddles() {}
+    func showPaddles() {
+        p1PaddleNode.position = CGPointMake(p1PaddleNode.size.width + marginWidth(), CGRectGetMidY(frame))
+        p2PaddleNode.position = CGPointMake(CGRectGetMaxX(frame) - p2PaddleNode.size.width - marginWidth(), CGRectGetMidY(frame))
+        p1PaddleNode.hidden = false
+        p2PaddleNode.hidden = false
+    }
+    
+    func hidePaddles() {
+        p1PaddleNode.hidden = true
+        p2PaddleNode.hidden = true
+    }
 
     func movePadde(paddle:SKSpriteNode, previousLocation:CGPoint, newLocation:CGPoint) {
         let x: CGFloat = paddle.position.x
@@ -451,7 +462,7 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
             view!.paused = true;
         }
     }
-    
+    /*
     func processControllerDirection() {
         
         let direction = GameViewController.controllerDirection(view!.window!.rootViewController as! GameViewController)
@@ -465,10 +476,10 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
         //}
 
     }
-
     override func update(currentTime: CFTimeInterval) {
         processControllerDirection()
     }
+    */
 
     override func pressesBegan(presses: Set<UIPress>, withEvent event: UIPressesEvent?) {
         print("Press began")
@@ -486,8 +497,11 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
     
     override func pressesEnded(presses: Set<UIPress>, withEvent event: UIPressesEvent?) {
         for item in presses {
-            if item.type == UIPressType.Select {
-                //
+            if item.type == UIPressType.Select ||
+                item.type == UIPressType.PlayPause {
+                if !isPlaying {
+                    restartGame()
+                }
             }
         }
     }

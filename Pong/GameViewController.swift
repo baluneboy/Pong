@@ -26,7 +26,7 @@ class GameViewController: UIViewController {
             skView.showsNodeCount = false
             
             scene = PongScene.init(size: skView.bounds.size,controlStyle: nil)
-            scene.scaleMode = .AspectFill
+            scene.scaleMode = .AspectFit
             skView.presentScene(scene)
             setupGameControllers()
         }
