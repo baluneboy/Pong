@@ -13,10 +13,8 @@ import SpriteKit
 
 class PongScene: SKScene, SKPhysicsContactDelegate {
     
-    let winScore = 1
+    let winScore = 21
     
-    let tvShader = SKShader(fileNamed: "TVShader.fsh")
-
     var magicWidth:CGFloat!
 
     enum ColliderType: UInt32 {
@@ -53,9 +51,16 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
     var gameOverSound: SKAction!
     var serveSound: SKAction!
     
+    var tvShader = SKShader()
+
     convenience init(size: CGSize, controlStyle:String!) {
         self.init(size: size)
         
+        //Why don't shaders work on TV?
+        if UIDevice.currentDevice().userInterfaceIdiom != .TV {
+            tvShader = SKShader(fileNamed: "TVShader.fsh")
+        }
+
         magicWidth = size.width / 70
         setupPhysics()
         setupSoundsa()
