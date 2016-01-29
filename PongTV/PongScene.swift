@@ -51,15 +51,11 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
     var gameOverSound: SKAction!
     var serveSound: SKAction!
     
-    var tvShader = SKShader()
+    //Why don't shaders work on TV?
+    var tvShader = SKShader(fileNamed: "TVShader.fsh")
 
     convenience init(size: CGSize, controlStyle:String!) {
         self.init(size: size)
-        
-        //Why don't shaders work on TV?
-        if UIDevice.currentDevice().userInterfaceIdiom != .TV {
-            tvShader = SKShader(fileNamed: "TVShader.fsh")
-        }
 
         magicWidth = size.width / 70
         setupPhysics()
@@ -104,8 +100,8 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
                 
         p1ScoreNode.fontSize = fontSize
         p2ScoreNode.fontSize = fontSize
-        p1ScoreNode.position = CGPointMake(size.width * 0.38, size.height - fontSize * 1.25)
-        p2ScoreNode.position = CGPointMake(size.width * 0.62, size.height - fontSize * 1.25)
+        p1ScoreNode.position = CGPointMake(size.width * 0.38, size.height - fontSize * 1.35)
+        p2ScoreNode.position = CGPointMake(size.width * 0.62, size.height - fontSize * 1.35)
         addChild(p1ScoreNode)
         addChild(p2ScoreNode)
         
@@ -113,13 +109,16 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
         gameOverNode = SKLabelNode.init(fontNamed: font)
         gameOverNode.fontColor = SKColor.whiteColor()
         gameOverNode.fontSize = fontSize
-        gameOverNode.position = CGPointMake(size.width / 2.0, size.height / 3.0)
+        gameOverNode.position = CGPointMake(size.width / 2.0, size.height / 2.8)
         gameOverNode.text = "GAME OVER"
         addChild(gameOverNode)
         
         //        shader.magicWidth = 16.0
-        p1PaddleNode.shader = tvShader
-        p2PaddleNode.shader = tvShader
+        
+        if UIDevice.currentDevice().userInterfaceIdiom != .TV {
+            p1PaddleNode.shader = tvShader
+            p2PaddleNode.shader = tvShader
+        }
 
 //        gameOverNode!.blendMode = SKBlendMode.Multiply
 //        gameOverNode!.colorBlendFactor = 1.0
@@ -146,14 +145,16 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
         
         
         //net
-        let lineWidth: CGFloat = magicWidth
         let lineHeight: CGFloat = magicWidth
         
         let lines: Int = Int((size.height / (2 * lineHeight)))
         var position: CGPoint = CGPointMake(size.width / 2.0, lineHeight * 1.5)
         for var i = 0; i < lines; i++ {
-            let netNode: SKSpriteNode = SKSpriteNode.init(color: SKColor.whiteColor(), size: CGSizeMake(lineWidth, lineHeight))
-            netNode.shader = tvShader
+            let netNode: SKSpriteNode = SKSpriteNode.init(color: SKColor.whiteColor(), size: CGSizeMake(lineHeight, lineHeight))
+            if UIDevice.currentDevice().userInterfaceIdiom != .TV {
+                netNode.shader = tvShader
+            }
+
             netNode.position = position
             position.y += 2 * lineHeight
             addChild(netNode)
@@ -232,7 +233,10 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
         
         ballNode = SKSpriteNode.init()
         ballNode.color = SKColor.whiteColor()
-        
+        if UIDevice.currentDevice().userInterfaceIdiom != .TV {
+            ballNode.shader = tvShader
+        }
+
         ballNode.size = CGSizeMake(magicWidth, magicWidth)
         ballNode.physicsBody = SKPhysicsBody.init(circleOfRadius: ballRadius)
         ballNode.physicsBody!.categoryBitMask = ColliderType.BallCategory.rawValue

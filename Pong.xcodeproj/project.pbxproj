@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6F0DD29A1C1A17D70073F969 /* bitdust2.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD2991C1A17D70073F969 /* bitdust2.ttf */; };
 		6F0DD2A91C1A17FA0073F969 /* bedop.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD29B1C1A17FA0073F969 /* bedop.caf */; };
 		6F0DD2AA1C1A17FA0073F969 /* bip.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD29C1C1A17FA0073F969 /* bip.caf */; };
 		6F0DD2AB1C1A17FA0073F969 /* bleep.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD29D1C1A17FA0073F969 /* bleep.caf */; };
@@ -54,12 +53,10 @@
 		9B5E8FEB1C1A32560097890D /* 7.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD2A61C1A17FA0073F969 /* 7.caf */; };
 		9B5E8FEC1C1A32560097890D /* 8.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD2A71C1A17FA0073F969 /* 8.caf */; };
 		9B5E8FED1C1A32560097890D /* 9.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD2A81C1A17FA0073F969 /* 9.caf */; };
-		9B5E8FEE1C1A32980097890D /* bitdust2.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD2991C1A17D70073F969 /* bitdust2.ttf */; };
 		9B7B8DB71C321CEE009FA506 /* GameControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7B8DB51C321CEE009FA506 /* GameControls.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6F0DD2991C1A17D70073F969 /* bitdust2.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = bitdust2.ttf; path = Pong/bitdust2.ttf; sourceTree = "<group>"; };
 		6F0DD29B1C1A17FA0073F969 /* bedop.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = bedop.caf; path = Pong/bedop.caf; sourceTree = "<group>"; };
 		6F0DD29C1C1A17FA0073F969 /* bip.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = bip.caf; path = Pong/bip.caf; sourceTree = "<group>"; };
 		6F0DD29D1C1A17FA0073F969 /* bleep.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = bleep.caf; path = Pong/bleep.caf; sourceTree = "<group>"; };
@@ -117,7 +114,6 @@
 		6F0DD2B71C1A180A0073F969 /* Font */ = {
 			isa = PBXGroup;
 			children = (
-				6F0DD2991C1A17D70073F969 /* bitdust2.ttf */,
 				6FB3E0D41C5684990076C266 /* Pong.ttf */,
 			);
 			name = Font;
@@ -302,7 +298,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B5E8FEB1C1A32560097890D /* 7.caf in Resources */,
-				9B5E8FEE1C1A32980097890D /* bitdust2.ttf in Resources */,
 				9B5E8FE71C1A32560097890D /* 3.caf in Resources */,
 				9B5E8FDF1C1A32560097890D /* bedop.caf in Resources */,
 				9B5E8FED1C1A32560097890D /* 9.caf in Resources */,
@@ -337,7 +332,6 @@
 				6F0DD2AC1C1A17FA0073F969 /* bonk.caf in Resources */,
 				6F0DD2AF1C1A17FA0073F969 /* 2.caf in Resources */,
 				6F0DD2B61C1A17FA0073F969 /* 9.caf in Resources */,
-				6F0DD29A1C1A17D70073F969 /* bitdust2.ttf in Resources */,
 				6F0DD2AB1C1A17FA0073F969 /* bleep.caf in Resources */,
 				6F0DD2AA1C1A17FA0073F969 /* bip.caf in Resources */,
 				6F0DD2B91C1A18D50073F969 /* gameover.caf in Resources */,

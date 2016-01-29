@@ -7,8 +7,8 @@ void main() {
     vec2 posMod = mod( v_tex_coord.xy, magicWidth );
     fragColor = vec4(1.0, 1.0, 1.0, 1.0);
 
-    if (posMod.y < (magicWidth / 2.0)) {
-        fragColor.rgb -= 0.9;
+    if (posMod.y < (magicWidth / 4.0)) {
+        fragColor.rgb -= 0.1;
     }
     return fragColor;
 }

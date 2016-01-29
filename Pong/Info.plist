@@ -25,7 +25,6 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>Pong.ttf</string>
-		<string>bitdust2.ttf</string>
 	</array>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
