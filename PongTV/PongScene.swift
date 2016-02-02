@@ -146,7 +146,7 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
         
         let lines: Int = Int((size.height / (2 * lineHeight)))
         var position: CGPoint = CGPointMake(size.width / 2.0, lineHeight * 1.5)
-        for var i = 0; i < lines; i++ {
+        for _ in 0...lines {
             let netNode: SKSpriteNode = SKSpriteNode.init(color: SKColor.whiteColor(), size: CGSizeMake(lineWidth, lineHeight))
             netNode.shader = tvShader
             netNode.position = position
@@ -245,7 +245,8 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
         let english = arc4random_uniform(UInt32(velocity * 2))
         var startingVelocityX: CGFloat = velocity
         let startingVelocityY: CGFloat = velocity - CGFloat(english)
-        
+        print("serve english \(english)")
+
         // serve direction
         if p1Score > p2Score {
             startingVelocityX = -startingVelocityX
@@ -330,7 +331,9 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
         let velocity = 1.18 as CGFloat
         let velocityX: CGFloat = ballNode.physicsBody!.velocity.dx * velocity
         // english
-        let velocityY: CGFloat = ballNode.physicsBody!.velocity.dy * velocity  + CGFloat(arc4random_uniform(50) * UInt32(0.1))
+        let english = CGFloat(arc4random_uniform(50))
+        print("accelerate english \(english)")
+        let velocityY: CGFloat = ballNode.physicsBody!.velocity.dy * velocity  + english
         ballNode.physicsBody!.velocity = CGVectorMake(velocityX, velocityY)
     }
     
@@ -385,7 +388,6 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
         let english: CGFloat = CGFloat(arc4random_uniform(20))
         let dx: CGFloat = ballNode.physicsBody!.velocity.dx
         let dy: CGFloat = ballNode.physicsBody!.velocity.dy
-
         if isPlaying {
             var firstBody: SKPhysicsBody = SKPhysicsBody()
             var secondBody: SKPhysicsBody = SKPhysicsBody()
@@ -438,11 +440,13 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
                     
                     if hitPoint < paddleBottom + paddleNode.size.height / 3.0 {
                         print("ball hit paddle bottom")
+                        print("bottom paddle english \(english)")
                         runAction(paddleSound1)
                         ballNode.physicsBody!.velocity = CGVectorMake(dx, english-dy)
                     }
                     else if hitPoint > paddleBottom + paddleNode.size.height * 2.0 / 3.0 {
                         print("ball hit paddle top")
+                        print("top paddle english \(english)")
                         runAction(paddleSound2)
                         ballNode.physicsBody!.velocity = CGVectorMake(dx, english+dy)
                     }
@@ -452,8 +456,6 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
                     }
                 }
             }
-        } else {
-            ballNode.physicsBody!.velocity = CGVectorMake(english+dx, english+dy)
         }
     }
     
@@ -464,24 +466,23 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
             view!.paused = true;
         }
     }
-    /*
+    
     func processControllerDirection() {
         
         let direction = GameViewController.controllerDirection(view!.window!.rootViewController as! GameViewController)
         print(direction().y)
-        //if direction().y > 0.2 || direction().y < -0.2 {
+        if direction().y > 0.2 || direction().y < -0.2 {
 //            let zeroToOne = CGFloat((direction().y + 1.0) * (direction().y + 1.0))
             let yPosition = CGFloat(direction().y * 380 + 540)
             movePadde(p1PaddleNode, previousLocation: p1PaddleNode.position, newLocation: CGPointMake(p1PaddleNode.position.x, yPosition))
 //            print(yPosition)
 //            p1PaddleNode.position = CGPointMake(p1PaddleNode.position.x, yPosition)
-        //}
+        }
 
     }
     override func update(currentTime: CFTimeInterval) {
         processControllerDirection()
     }
-    */
 
     override func pressesBegan(presses: Set<UIPress>, withEvent event: UIPressesEvent?) {
         print("Press began")
