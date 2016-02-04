@@ -9,6 +9,5 @@ pleasantly nostalgic, yet unrefined — Now for your Apple TV!
 
 
 
-
-Thanks to BitDust Two for the pixelated font.
-(looking for a 8x4 pixel font to best represent the earliest renderings.)
+Now with fancy Pong! font.
+Now supporting game controllers, but we're looking for help getting them calibrated.
