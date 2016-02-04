@@ -467,36 +467,59 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func playPause() {
+        print("Play Pause")
         if view!.paused == true {
             view!.paused = false;
         } else {
             view!.paused = true;
         }
     }
-    /*
+
     func processControllerDirection() {
         
         let direction = GameViewController.controllerDirection(view!.window!.rootViewController as! GameViewController)
-        print(direction().y)
-        //if direction().y > 0.2 || direction().y < -0.2 {
-//            let zeroToOne = CGFloat((direction().y + 1.0) * (direction().y + 1.0))
-            let yPosition = CGFloat(direction().y * 380 + 540)
-            movePadde(p1PaddleNode, previousLocation: p1PaddleNode.position, newLocation: CGPointMake(p1PaddleNode.position.x, yPosition))
-//            print(yPosition)
-//            p1PaddleNode.position = CGPointMake(p1PaddleNode.position.x, yPosition)
-        //}
-
+        
+        if direction().y > 0.0002 || direction().y < -0.0002 {
+            positionPaddle(p1PaddleNode, y: direction().y)
+            //placePaddle(p1PaddleNode, y: direction().y)
+        }
+        
     }
+    
+    func positionPaddle(paddle:SKSpriteNode, y:Float) {
+        let reverseDirection = y
+         print("\(reverseDirection)")
+
+        var vector = CGFloat(reverseDirection * 5)
+        if (reverseDirection < -0.65) || (reverseDirection > 0.65) {
+            vector = CGFloat(reverseDirection * 20)
+        } else if (reverseDirection < -0.95) || (reverseDirection > 0.95) {
+            vector = CGFloat(reverseDirection * 80)
+        }
+        var calculatedY = paddle.position.y + (vector * -1)
+        let max = 1000 as CGFloat
+        let min = 100 as CGFloat
+        if (calculatedY > max) { calculatedY = max }
+        if (calculatedY < min) { calculatedY = min }
+        
+        let yPosition = CGFloat(calculatedY)
+        // print("\(y) \(yPosition)")
+        paddle.position = CGPointMake(paddle.position.x, yPosition)
+    }
+    func placePaddle(paddle:SKSpriteNode, y:Float) {
+        let reverseDirection = y * -1
+        let yPosition = CGFloat(reverseDirection * 420 + 540)
+        // print("\(y) \(yPosition)")
+        paddle.position = CGPointMake(paddle.position.x, yPosition)
+    }
+    
     override func update(currentTime: CFTimeInterval) {
         processControllerDirection()
     }
-    */
 
     override func pressesBegan(presses: Set<UIPress>, withEvent event: UIPressesEvent?) {
-        print("Press began")
         for item in presses {
             if item.type == .PlayPause {
-                print("PlayPause")
                 if isPlaying == true {
                     playPause()
                 } else {
