@@ -150,7 +150,7 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
         let lines: Int = Int((size.height / (2 * lineHeight)))
         var position: CGPoint = CGPointMake(size.width / 2.0, lineHeight * 1.5)
         for _ in 0...lines {
-            let netNode: SKSpriteNode = SKSpriteNode.init(color: SKColor.whiteColor(), size: CGSizeMake(lineWidth, lineHeight))
+            let netNode: SKSpriteNode = SKSpriteNode.init(color: SKColor.whiteColor(), size: CGSizeMake(lineHeight, lineHeight))
             netNode.shader = tvShader
             netNode.position = position
             position.y += 2 * lineHeight
