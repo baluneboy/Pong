@@ -477,9 +477,15 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
     func processControllerDirection() {
         
         let direction = GameViewController.controllerDirection(view!.window!.rootViewController as! GameViewController)
+        //let pad = GameViewController.controllerDPad
+        //GameViewController.controller.extendedGamepad.leftThumbstick.xAxis.value
         
         if direction().y > 0.0002 || direction().y < -0.0002 {
-            positionPaddle(p1PaddleNode, y: direction().y)
+            var node = p1PaddleNode
+//            if lpad == GameViewController().controllerDPad {
+//                node = p2PaddleNode
+//            }
+            positionPaddle(node, y: direction().y)
             //placePaddle(p1PaddleNode, y: direction().y)
         }
         
@@ -489,12 +495,7 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
         let reverseDirection = y
          print("\(reverseDirection)")
 
-        var vector = CGFloat(reverseDirection * 5)
-        if (reverseDirection < -0.65) || (reverseDirection > 0.65) {
-            vector = CGFloat(reverseDirection * 20)
-        } else if (reverseDirection < -0.95) || (reverseDirection > 0.95) {
-            vector = CGFloat(reverseDirection * 80)
-        }
+        let vector = CGFloat(reverseDirection * 50)
         var calculatedY = paddle.position.y + (vector * -1)
         let max = 1000 as CGFloat
         let min = 100 as CGFloat
