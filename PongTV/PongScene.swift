@@ -218,7 +218,7 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
         invalidateTimer()
         serveBall()
         
-        timer = NSTimer.scheduledTimerWithTimeInterval(3.8, target: self, selector: "accelerateBall", userInfo: nil, repeats: true)
+        timer = NSTimer.scheduledTimerWithTimeInterval(3.8, target: self, selector: #selector(PongScene.accelerateBall), userInfo: nil, repeats: true)
     }
     
     func serveBall() {
@@ -269,6 +269,7 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
         invalidateTimer()
         
         isPlaying = false
+        gameOverNode.text = "GAME OVER"
         gameOverNode.hidden = false
 
         p1Score = 0
@@ -294,9 +295,9 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
 
         switch player {
         case 1:
-            p1Score++
+            p1Score += 1
         case 2:
-            p2Score++
+            p2Score += 1
         default:
             break
         }
@@ -304,16 +305,17 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
         if p1Score == winScore || p2Score == winScore {
             gameOver()
         } else {
-            performSelector(Selector("serve"), withObject: self, afterDelay: 1.68)
+            performSelector(#selector(PongScene.serve), withObject: self, afterDelay: 1.68)
         }
         
         drawScore()
     }
     
     func gameOver() {
-        performSelector(Selector("runAction:"), withObject: gameOverSound, afterDelay: 0.38)
+        performSelector(#selector(SCNActionable.runAction(_:)), withObject: gameOverSound, afterDelay: 0.38)
 
         isPlaying = false
+        gameOverNode.text = "GAME OVER"
         gameOverNode.hidden = false
         
         invalidateTimer()
@@ -469,31 +471,28 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
         print("Play Pause")
         if view!.paused == true {
             view!.paused = false;
+            gameOverNode.hidden = true
         } else {
+            gameOverNode.text = "PAUSE"
+            gameOverNode.hidden = false
             view!.paused = true;
         }
+        view!.setNeedsDisplay()
     }
 
     func processControllerDirection() {
-        
-        let direction = GameViewController.controllerDirection(view!.window!.rootViewController as! GameViewController)
-        //let pad = GameViewController.controllerDPad
-        //GameViewController.controller.extendedGamepad.leftThumbstick.xAxis.value
+        let gameVC = view!.window!.rootViewController as! GameViewController
+        let direction = GameViewController.controllerDirection(gameVC)
         
         if direction().y > 0.0002 || direction().y < -0.0002 {
-            var node = p1PaddleNode
-//            if lpad == GameViewController().controllerDPad {
-//                node = p2PaddleNode
-//            }
+            let node = p1PaddleNode
             positionPaddle(node, y: direction().y)
-            //placePaddle(p1PaddleNode, y: direction().y)
         }
         
     }
     
     func positionPaddle(paddle:SKSpriteNode, y:Float) {
         let reverseDirection = y
-         print("\(reverseDirection)")
 
         let vector = CGFloat(reverseDirection * 50)
         var calculatedY = paddle.position.y + (vector * -1)
@@ -503,13 +502,11 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
         if (calculatedY < min) { calculatedY = min }
         
         let yPosition = CGFloat(calculatedY)
-        // print("\(y) \(yPosition)")
         paddle.position = CGPointMake(paddle.position.x, yPosition)
     }
     func placePaddle(paddle:SKSpriteNode, y:Float) {
         let reverseDirection = y * -1
         let yPosition = CGFloat(reverseDirection * 420 + 540)
-        // print("\(y) \(yPosition)")
         paddle.position = CGPointMake(paddle.position.x, yPosition)
     }
     
