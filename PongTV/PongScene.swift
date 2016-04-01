@@ -472,12 +472,14 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
         if view!.paused == true {
             view!.paused = false;
             gameOverNode.hidden = true
+            showPaddles()
         } else {
+            view!.paused = true;
             gameOverNode.text = "PAUSE"
             gameOverNode.hidden = false
-            view!.paused = true;
+            hidePaddles()
         }
-        view!.setNeedsDisplay()
+        view!.setNeedsLayout()
     }
 
     func processControllerDirection() {
