@@ -1,49 +1,48 @@
 /*
-    Copyright (C) 2015 Apple Inc. All Rights Reserved.
-    See LICENSE.txt for this sample’s licensing information
-    
-    Abstract:
-    Handles keyboard (OS X), touch (iOS) and controller (iOS, tvOS) input for controlling the game.
-*/
+ Copyright (C) 2016 Apple Inc. All Rights Reserved.
+ See LICENSE.txt for this sample’s licensing information
+ 
+ Abstract:
+ Handles keyboard (OS X), touch (iOS) and controller (iOS, tvOS) input for controlling the game.
+ */
 
 import simd
 import SceneKit
 import GameController
-import GameplayKit
 
 #if os(OSX)
     
-protocol KeyboardAndMouseEventsDelegate {
-    func mouseDown(view: NSView, theEvent: NSEvent) -> Bool
-    func mouseDragged(view: NSView, theEvent: NSEvent) -> Bool
-    func mouseUp(view: NSView, theEvent: NSEvent) -> Bool
-    func keyDown(view: NSView, theEvent: NSEvent) -> Bool
-    func keyUp(view: NSView, theEvent: NSEvent) -> Bool
-}
+    protocol KeyboardAndMouseEventsDelegate {
+        func mouseDown(view: NSView, theEvent: NSEvent) -> Bool
+        func mouseDragged(view: NSView, theEvent: NSEvent) -> Bool
+        func mouseUp(view: NSView, theEvent: NSEvent) -> Bool
+        func keyDown(view: NSView, theEvent: NSEvent) -> Bool
+        func keyUp(view: NSView, theEvent: NSEvent) -> Bool
+    }
     
-private enum KeyboardDirection : UInt16 {
-    case Left   = 123
-    case Right  = 124
-    case Down   = 125
-    case Up     = 126
-    
-    var vector : float2 {
-        switch self {
-        case .Up:    return float2( 0, -1)
-        case .Down:  return float2( 0,  1)
-        case .Left:  return float2(-1,  0)
-        case .Right: return float2( 1,  0)
+    private enum KeyboardDirection : UInt16 {
+        case Left   = 123
+        case Right  = 124
+        case Down   = 125
+        case Up     = 126
+        
+        var vector : float2 {
+            switch self {
+            case .Up:    return float2( 0, -1)
+            case .Down:  return float2( 0,  1)
+            case .Left:  return float2(-1,  0)
+            case .Right: return float2( 1,  0)
+            }
         }
     }
-}
     
-extension GameViewController: KeyboardAndMouseEventsDelegate {
-}
+    extension GameViewController: KeyboardAndMouseEventsDelegate {
+    }
     
 #endif
 
 extension GameViewController {
-
+    
     // MARK: Controller orientation
     
     private static let controllerAcceleration = Float(1.0 / 10.0)
@@ -66,7 +65,7 @@ extension GameViewController {
     
     internal func setupGameControllers() {
         #if os(OSX)
-        gameView.eventsDelegate = self
+            gameView.eventsDelegate = self
         #endif
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(GameViewController.handleControllerDidConnectNotification(_:)), name: GCControllerDidConnectNotification, object: nil)
@@ -74,10 +73,10 @@ extension GameViewController {
     
     @objc func handleControllerDidConnectNotification(notification: NSNotification) {
         let gameController = notification.object as! GCController
-        registerControllerMovementEvents(gameController)
+        registerCharacterMovementEvents(gameController)
     }
     
-    private func registerControllerMovementEvents(gameController: GCController) {
+    private func registerCharacterMovementEvents(gameController: GCController) {
         
         // An analog movement handler for D-pads and thumbsticks.
         let movementHandler: GCControllerDirectionPadValueChangedHandler = { [unowned self] dpad, _, _ in
@@ -86,11 +85,12 @@ extension GameViewController {
         
         #if os(tvOS)
             
-        // Apple TV remote
-        if let microGamepad = gameController.microGamepad {
-            microGamepad.allowsRotation = true
-            microGamepad.dpad.valueChangedHandler = movementHandler
-        }
+            // Apple TV remote
+            if let microGamepad = gameController.microGamepad {
+                // Allow the gamepad to handle transposing D-pad values when rotating the controller.
+                microGamepad.allowsRotation = true
+                microGamepad.dpad.valueChangedHandler = movementHandler
+            }
             
         #endif
         
@@ -99,12 +99,10 @@ extension GameViewController {
             gamepad.dpad.valueChangedHandler = movementHandler
         }
         
-        // Extended gamepad left and right thumbstick
+        // Extended gamepad left thumbstick
         if let extendedGamepad = gameController.extendedGamepad {
             extendedGamepad.leftThumbstick.valueChangedHandler = movementHandler
-            extendedGamepad.rightThumbstick.valueChangedHandler = movementHandler
         }
-        
     }
     
     // MARK: Touch Events
@@ -172,44 +170,44 @@ extension GameViewController {
     #if os(OSX)
     
     func mouseDown(view: NSView, theEvent: NSEvent) -> Bool {
-        // Remember last mouse position for dragging.
-        lastMousePosition = float2(view.convertPoint(theEvent.locationInWindow, fromView: nil))
-        
-        return true
+    // Remember last mouse position for dragging.
+    lastMousePosition = float2(view.convertPoint(theEvent.locationInWindow, fromView: nil))
+    
+    return true
     }
     
     func mouseDragged(view: NSView, theEvent: NSEvent) -> Bool {
-        let mousePosition = float2(view.convertPoint(theEvent.locationInWindow, fromView: nil))
-        panCamera(mousePosition - lastMousePosition)
-        lastMousePosition = mousePosition
-        
-        return true
+    let mousePosition = float2(view.convertPoint(theEvent.locationInWindow, fromView: nil))
+    panCamera(mousePosition - lastMousePosition)
+    lastMousePosition = mousePosition
+    
+    return true
     }
     
     func mouseUp(view: NSView, theEvent: NSEvent) -> Bool {
-        return true
+    return true
     }
     
     func keyDown(view: NSView, theEvent: NSEvent) -> Bool {
-        if let direction = KeyboardDirection(rawValue: theEvent.keyCode) {
-            if !theEvent.ARepeat {
-                controllerStoredDirection += direction.vector
-            }
-            return true
-        }
-        
-        return false
+    if let direction = KeyboardDirection(rawValue: theEvent.keyCode) {
+    if !theEvent.ARepeat {
+    controllerStoredDirection += direction.vector
+    }
+    return true
+    }
+    
+    return false
     }
     
     func keyUp(view: NSView, theEvent: NSEvent) -> Bool {
-        if let direction = KeyboardDirection(rawValue: theEvent.keyCode) {
-            if !theEvent.ARepeat {
-                controllerStoredDirection -= direction.vector
-            }
-            return true
-        }
-        
-        return false
+    if let direction = KeyboardDirection(rawValue: theEvent.keyCode) {
+    if !theEvent.ARepeat {
+    controllerStoredDirection -= direction.vector
+    }
+    return true
+    }
+    
+    return false
     }
     
     #endif

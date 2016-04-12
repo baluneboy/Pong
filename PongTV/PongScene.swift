@@ -481,7 +481,7 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
         }
         view!.setNeedsLayout()
     }
-
+    #if os(tvOS)
     func processControllerDirection() {
         let gameVC = view!.window!.rootViewController as! GameViewController
         let direction = GameViewController.controllerDirection(gameVC)
@@ -490,8 +490,9 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
             let node = p1PaddleNode
             positionPaddle(node, y: direction().y)
         }
-        
     }
+    #endif
+
     
     func positionPaddle(paddle:SKSpriteNode, y:Float) {
         let reverseDirection = y
@@ -513,7 +514,9 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
     }
     
     override func update(currentTime: CFTimeInterval) {
+        #if os(tvOS)
         processControllerDirection()
+        #endif
     }
 
     override func pressesBegan(presses: Set<UIPress>, withEvent event: UIPressesEvent?) {
