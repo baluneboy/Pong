@@ -26,19 +26,19 @@ class GameViewController: UIViewController {
             skView.showsNodeCount = false
             
             scene = PongScene.init(size: skView.bounds.size,controlStyle: nil)
-            scene.scaleMode = .AspectFit
+            scene.scaleMode = .aspectFit
             skView.presentScene(scene)
             setupGameControllers()
         }
     }
 
-    override func pressesBegan(presses: Set<UIPress>, withEvent event: UIPressesEvent?) {
-        super.pressesBegan(presses, withEvent: event)
-        scene.pressesBegan(presses, withEvent: event)
+    override func pressesBegan(_ presses: Set<UIPress>, with event: UIPressesEvent?) {
+        super.pressesBegan(presses, with: event)
+        scene.pressesBegan(presses, with: event)
     }
     
-    override func pressesEnded(presses: Set<UIPress>, withEvent event: UIPressesEvent?) {
-        super.pressesEnded(presses, withEvent: event)
-        scene.pressesEnded(presses, withEvent: event)
+    override func pressesEnded(_ presses: Set<UIPress>, with event: UIPressesEvent?) {
+        super.pressesEnded(presses, with: event)
+        scene.pressesEnded(presses, with: event)
     }
 }

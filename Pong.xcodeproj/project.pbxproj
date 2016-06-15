@@ -38,6 +38,49 @@
 		6FFE7C711C18773F0043E721 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FFE7C6F1C18773F0043E721 /* LaunchScreen.storyboard */; };
 		6FFE7C791C1878E50043E721 /* PongScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FFE7C781C1878E50043E721 /* PongScene.swift */; };
 		6FFE7C7B1C187B370043E721 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FFE7C7A1C187B370043E721 /* SpriteKit.framework */; };
+		9B42D6AA1D109DA900CFFE39 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B42D6A81D109DA900CFFE39 /* Interface.storyboard */; };
+		9B42D6AC1D109DA900CFFE39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B42D6AB1D109DA900CFFE39 /* Assets.xcassets */; };
+		9B42D6B31D109DA900CFFE39 /* Watch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9B42D6B21D109DA900CFFE39 /* Watch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		9B42D6B81D109DA900CFFE39 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B42D6B71D109DA900CFFE39 /* InterfaceController.swift */; };
+		9B42D6BA1D109DA900CFFE39 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9B42D6B91D109DA900CFFE39 /* GameScene.sks */; };
+		9B42D6BC1D109DA900CFFE39 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B42D6BB1D109DA900CFFE39 /* GameScene.swift */; };
+		9B42D6BE1D109DA900CFFE39 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B42D6BD1D109DA900CFFE39 /* ExtensionDelegate.swift */; };
+		9B42D6C01D109DA900CFFE39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B42D6BF1D109DA900CFFE39 /* Assets.xcassets */; };
+		9B42D6C41D109DA900CFFE39 /* Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 9B42D6A61D109DA900CFFE39 /* Watch.app */; };
+		9B42D6CF1D109EC700CFFE39 /* Pong.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6FB3E0D41C5684990076C266 /* Pong.ttf */; };
+		9B42D6D01D109EC800CFFE39 /* Pong.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6FB3E0D41C5684990076C266 /* Pong.ttf */; };
+		9B42D6D11D109ECE00CFFE39 /* bedop.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD29B1C1A17FA0073F969 /* bedop.caf */; };
+		9B42D6D21D109ECE00CFFE39 /* gameover.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD2B81C1A18D50073F969 /* gameover.caf */; };
+		9B42D6D31D109ECE00CFFE39 /* bip.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD29C1C1A17FA0073F969 /* bip.caf */; };
+		9B42D6D41D109ECE00CFFE39 /* bleep.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD29D1C1A17FA0073F969 /* bleep.caf */; };
+		9B42D6D51D109ECE00CFFE39 /* bonk.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD29E1C1A17FA0073F969 /* bonk.caf */; };
+		9B42D6D61D109ECE00CFFE39 /* 0.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD29F1C1A17FA0073F969 /* 0.caf */; };
+		9B42D6D71D109ECE00CFFE39 /* 1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD2A01C1A17FA0073F969 /* 1.caf */; };
+		9B42D6D81D109ECE00CFFE39 /* 2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD2A11C1A17FA0073F969 /* 2.caf */; };
+		9B42D6D91D109ECE00CFFE39 /* 3.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD2A21C1A17FA0073F969 /* 3.caf */; };
+		9B42D6DA1D109ECE00CFFE39 /* 4.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD2A31C1A17FA0073F969 /* 4.caf */; };
+		9B42D6DB1D109ECE00CFFE39 /* 5.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD2A41C1A17FA0073F969 /* 5.caf */; };
+		9B42D6DC1D109ECE00CFFE39 /* 6.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD2A51C1A17FA0073F969 /* 6.caf */; };
+		9B42D6DD1D109ECE00CFFE39 /* 7.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD2A61C1A17FA0073F969 /* 7.caf */; };
+		9B42D6DE1D109ECE00CFFE39 /* 8.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD2A71C1A17FA0073F969 /* 8.caf */; };
+		9B42D6DF1D109ECE00CFFE39 /* 9.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD2A81C1A17FA0073F969 /* 9.caf */; };
+		9B42D6E01D109ECE00CFFE39 /* bedop.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD29B1C1A17FA0073F969 /* bedop.caf */; };
+		9B42D6E11D109ECE00CFFE39 /* gameover.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD2B81C1A18D50073F969 /* gameover.caf */; };
+		9B42D6E21D109ECE00CFFE39 /* bip.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD29C1C1A17FA0073F969 /* bip.caf */; };
+		9B42D6E31D109ECE00CFFE39 /* bleep.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD29D1C1A17FA0073F969 /* bleep.caf */; };
+		9B42D6E41D109ECE00CFFE39 /* bonk.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD29E1C1A17FA0073F969 /* bonk.caf */; };
+		9B42D6E51D109ECE00CFFE39 /* 0.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD29F1C1A17FA0073F969 /* 0.caf */; };
+		9B42D6E61D109ECE00CFFE39 /* 1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD2A01C1A17FA0073F969 /* 1.caf */; };
+		9B42D6E71D109ECE00CFFE39 /* 2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD2A11C1A17FA0073F969 /* 2.caf */; };
+		9B42D6E81D109ECE00CFFE39 /* 3.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD2A21C1A17FA0073F969 /* 3.caf */; };
+		9B42D6E91D109ECE00CFFE39 /* 4.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD2A31C1A17FA0073F969 /* 4.caf */; };
+		9B42D6EA1D109ECE00CFFE39 /* 5.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD2A41C1A17FA0073F969 /* 5.caf */; };
+		9B42D6EB1D109ECE00CFFE39 /* 6.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD2A51C1A17FA0073F969 /* 6.caf */; };
+		9B42D6EC1D109ECE00CFFE39 /* 7.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD2A61C1A17FA0073F969 /* 7.caf */; };
+		9B42D6ED1D109ECE00CFFE39 /* 8.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD2A71C1A17FA0073F969 /* 8.caf */; };
+		9B42D6EE1D109ECE00CFFE39 /* 9.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD2A81C1A17FA0073F969 /* 9.caf */; };
+		9B42D6F21D10A2A100CFFE39 /* PongScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B42D6F11D10A2A100CFFE39 /* PongScene.swift */; };
+		9B42D6F41D10A6D600CFFE39 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FFE7C7A1C187B370043E721 /* SpriteKit.framework */; };
 		9B5E8FDF1C1A32560097890D /* bedop.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD29B1C1A17FA0073F969 /* bedop.caf */; };
 		9B5E8FE01C1A32560097890D /* gameover.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD2B81C1A18D50073F969 /* gameover.caf */; };
 		9B5E8FE11C1A32560097890D /* bip.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD29C1C1A17FA0073F969 /* bip.caf */; };
@@ -56,6 +99,48 @@
 		9B7B8DB71C321CEE009FA506 /* GameControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7B8DB51C321CEE009FA506 /* GameControls.swift */; };
 		9BA327D61CBDC37700CC7F29 /* GameController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BA327D51CBDC37700CC7F29 /* GameController.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9B42D6B41D109DA900CFFE39 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6FFE7C571C18773F0043E721 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9B42D6B11D109DA900CFFE39;
+			remoteInfo = "Watch Extension";
+		};
+		9B42D6C21D109DA900CFFE39 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6FFE7C571C18773F0043E721 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9B42D6A51D109DA900CFFE39;
+			remoteInfo = Watch;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9B42D6C81D109DA900CFFE39 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				9B42D6B31D109DA900CFFE39 /* Watch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B42D6CC1D109DA900CFFE39 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				9B42D6C41D109DA900CFFE39 /* Watch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		6F0DD29B1C1A17FA0073F969 /* bedop.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = bedop.caf; path = Pong/bedop.caf; sourceTree = "<group>"; };
@@ -90,6 +175,18 @@
 		6FFE7C721C18773F0043E721 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6FFE7C781C1878E50043E721 /* PongScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PongScene.swift; path = PongTV/PongScene.swift; sourceTree = "<group>"; };
 		6FFE7C7A1C187B370043E721 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		9B42D6A61D109DA900CFFE39 /* Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Watch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B42D6A91D109DA900CFFE39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		9B42D6AB1D109DA900CFFE39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9B42D6AD1D109DA900CFFE39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B42D6B21D109DA900CFFE39 /* Watch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Watch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B42D6B71D109DA900CFFE39 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		9B42D6B91D109DA900CFFE39 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		9B42D6BB1D109DA900CFFE39 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		9B42D6BD1D109DA900CFFE39 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		9B42D6BF1D109DA900CFFE39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9B42D6C11D109DA900CFFE39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B42D6F11D10A2A100CFFE39 /* PongScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PongScene.swift; sourceTree = "<group>"; };
 		9B7B8DB51C321CEE009FA506 /* GameControls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameControls.swift; sourceTree = "<group>"; };
 		9BA327D51CBDC37700CC7F29 /* GameController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameController.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS9.2.sdk/System/Library/Frameworks/GameController.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
@@ -108,6 +205,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				6FFE7C7B1C187B370043E721 /* SpriteKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B42D6AF1D109DA900CFFE39 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B42D6F41D10A6D600CFFE39 /* SpriteKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,6 +297,8 @@
 				6F18BEC81C19C33F00E02B37 /* SharedResources */,
 				6FFE7C611C18773F0043E721 /* Pong */,
 				6FE337651C18D0E7006CC1B2 /* PongTV */,
+				9B42D6A71D109DA900CFFE39 /* Watch */,
+				9B42D6B61D109DA900CFFE39 /* Watch Extension */,
 				6F18BEC91C19C35C00E02B37 /* Frameworks */,
 				6FFE7C601C18773F0043E721 /* Products */,
 			);
@@ -202,6 +309,8 @@
 			children = (
 				6FFE7C5F1C18773F0043E721 /* Pong.app */,
 				6FE337641C18D0E7006CC1B2 /* PongTV.app */,
+				9B42D6A61D109DA900CFFE39 /* Watch.app */,
+				9B42D6B21D109DA900CFFE39 /* Watch Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -218,6 +327,30 @@
 			);
 			name = Pong;
 			path = PongTV;
+			sourceTree = "<group>";
+		};
+		9B42D6A71D109DA900CFFE39 /* Watch */ = {
+			isa = PBXGroup;
+			children = (
+				9B42D6A81D109DA900CFFE39 /* Interface.storyboard */,
+				9B42D6AB1D109DA900CFFE39 /* Assets.xcassets */,
+				9B42D6AD1D109DA900CFFE39 /* Info.plist */,
+			);
+			path = Watch;
+			sourceTree = "<group>";
+		};
+		9B42D6B61D109DA900CFFE39 /* Watch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				9B42D6B71D109DA900CFFE39 /* InterfaceController.swift */,
+				9B42D6B91D109DA900CFFE39 /* GameScene.sks */,
+				9B42D6BB1D109DA900CFFE39 /* GameScene.swift */,
+				9B42D6F11D10A2A100CFFE39 /* PongScene.swift */,
+				9B42D6BD1D109DA900CFFE39 /* ExtensionDelegate.swift */,
+				9B42D6BF1D109DA900CFFE39 /* Assets.xcassets */,
+				9B42D6C11D109DA900CFFE39 /* Info.plist */,
+			);
+			path = "Watch Extension";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,15 +380,51 @@
 				6FFE7C5B1C18773F0043E721 /* Sources */,
 				6FFE7C5C1C18773F0043E721 /* Frameworks */,
 				6FFE7C5D1C18773F0043E721 /* Resources */,
+				9B42D6CC1D109DA900CFFE39 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				9B42D6C31D109DA900CFFE39 /* PBXTargetDependency */,
 			);
 			name = Pong;
 			productName = PongTV;
 			productReference = 6FFE7C5F1C18773F0043E721 /* Pong.app */;
 			productType = "com.apple.product-type.application";
+		};
+		9B42D6A51D109DA900CFFE39 /* Watch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9B42D6C91D109DA900CFFE39 /* Build configuration list for PBXNativeTarget "Watch" */;
+			buildPhases = (
+				9B42D6A41D109DA900CFFE39 /* Resources */,
+				9B42D6C81D109DA900CFFE39 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9B42D6B51D109DA900CFFE39 /* PBXTargetDependency */,
+			);
+			name = Watch;
+			productName = Watch;
+			productReference = 9B42D6A61D109DA900CFFE39 /* Watch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		9B42D6B11D109DA900CFFE39 /* Watch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9B42D6C51D109DA900CFFE39 /* Build configuration list for PBXNativeTarget "Watch Extension" */;
+			buildPhases = (
+				9B42D6AE1D109DA900CFFE39 /* Sources */,
+				9B42D6AF1D109DA900CFFE39 /* Frameworks */,
+				9B42D6B01D109DA900CFFE39 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Watch Extension";
+			productName = "Watch Extension";
+			productReference = 9B42D6B21D109DA900CFFE39 /* Watch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -263,13 +432,14 @@
 		6FFE7C571C18773F0043E721 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0710;
-				LastUpgradeCheck = 0720;
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = OEI;
 				TargetAttributes = {
 					6FE337631C18D0E7006CC1B2 = {
 						CreatedOnToolsVersion = 7.1.1;
 						DevelopmentTeam = D4V23AZF66;
+						LastSwiftMigration = 0800;
 						SystemCapabilities = {
 							com.apple.GameControllers.appletvos = {
 								enabled = 1;
@@ -279,6 +449,18 @@
 					6FFE7C5E1C18773F0043E721 = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = D4V23AZF66;
+					};
+					9B42D6A51D109DA900CFFE39 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = D4V23AZF66;
+						DevelopmentTeamName = "Object Enterprises";
+						ProvisioningStyle = Automatic;
+					};
+					9B42D6B11D109DA900CFFE39 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = D4V23AZF66;
+						DevelopmentTeamName = "Object Enterprises";
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -297,6 +479,8 @@
 			targets = (
 				6FFE7C5E1C18773F0043E721 /* Pong */,
 				6FE337631C18D0E7006CC1B2 /* PongTV */,
+				9B42D6A51D109DA900CFFE39 /* Watch */,
+				9B42D6B11D109DA900CFFE39 /* Watch Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -355,6 +539,56 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9B42D6A41D109DA900CFFE39 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B42D6D91D109ECE00CFFE39 /* 3.caf in Resources */,
+				9B42D6D81D109ECE00CFFE39 /* 2.caf in Resources */,
+				9B42D6DE1D109ECE00CFFE39 /* 8.caf in Resources */,
+				9B42D6DB1D109ECE00CFFE39 /* 5.caf in Resources */,
+				9B42D6D31D109ECE00CFFE39 /* bip.caf in Resources */,
+				9B42D6DD1D109ECE00CFFE39 /* 7.caf in Resources */,
+				9B42D6DF1D109ECE00CFFE39 /* 9.caf in Resources */,
+				9B42D6CF1D109EC700CFFE39 /* Pong.ttf in Resources */,
+				9B42D6D71D109ECE00CFFE39 /* 1.caf in Resources */,
+				9B42D6D51D109ECE00CFFE39 /* bonk.caf in Resources */,
+				9B42D6AC1D109DA900CFFE39 /* Assets.xcassets in Resources */,
+				9B42D6D41D109ECE00CFFE39 /* bleep.caf in Resources */,
+				9B42D6AA1D109DA900CFFE39 /* Interface.storyboard in Resources */,
+				9B42D6DA1D109ECE00CFFE39 /* 4.caf in Resources */,
+				9B42D6D61D109ECE00CFFE39 /* 0.caf in Resources */,
+				9B42D6DC1D109ECE00CFFE39 /* 6.caf in Resources */,
+				9B42D6D21D109ECE00CFFE39 /* gameover.caf in Resources */,
+				9B42D6D11D109ECE00CFFE39 /* bedop.caf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B42D6B01D109DA900CFFE39 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B42D6E81D109ECE00CFFE39 /* 3.caf in Resources */,
+				9B42D6E71D109ECE00CFFE39 /* 2.caf in Resources */,
+				9B42D6ED1D109ECE00CFFE39 /* 8.caf in Resources */,
+				9B42D6EA1D109ECE00CFFE39 /* 5.caf in Resources */,
+				9B42D6E21D109ECE00CFFE39 /* bip.caf in Resources */,
+				9B42D6EC1D109ECE00CFFE39 /* 7.caf in Resources */,
+				9B42D6EE1D109ECE00CFFE39 /* 9.caf in Resources */,
+				9B42D6D01D109EC800CFFE39 /* Pong.ttf in Resources */,
+				9B42D6E61D109ECE00CFFE39 /* 1.caf in Resources */,
+				9B42D6E41D109ECE00CFFE39 /* bonk.caf in Resources */,
+				9B42D6C01D109DA900CFFE39 /* Assets.xcassets in Resources */,
+				9B42D6E31D109ECE00CFFE39 /* bleep.caf in Resources */,
+				9B42D6BA1D109DA900CFFE39 /* GameScene.sks in Resources */,
+				9B42D6E91D109ECE00CFFE39 /* 4.caf in Resources */,
+				9B42D6E51D109ECE00CFFE39 /* 0.caf in Resources */,
+				9B42D6EB1D109ECE00CFFE39 /* 6.caf in Resources */,
+				9B42D6E11D109ECE00CFFE39 /* gameover.caf in Resources */,
+				9B42D6E01D109ECE00CFFE39 /* bedop.caf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -379,7 +613,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9B42D6AE1D109DA900CFFE39 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B42D6F21D10A2A100CFFE39 /* PongScene.swift in Sources */,
+				9B42D6BC1D109DA900CFFE39 /* GameScene.swift in Sources */,
+				9B42D6B81D109DA900CFFE39 /* InterfaceController.swift in Sources */,
+				9B42D6BE1D109DA900CFFE39 /* ExtensionDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9B42D6B51D109DA900CFFE39 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9B42D6B11D109DA900CFFE39 /* Watch Extension */;
+			targetProxy = 9B42D6B41D109DA900CFFE39 /* PBXContainerItemProxy */;
+		};
+		9B42D6C31D109DA900CFFE39 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9B42D6A51D109DA900CFFE39 /* Watch */;
+			targetProxy = 9B42D6C21D109DA900CFFE39 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		6FE337701C18D0E7006CC1B2 /* Main.storyboard */ = {
@@ -406,6 +664,14 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		9B42D6A81D109DA900CFFE39 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9B42D6A91D109DA900CFFE39 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -422,6 +688,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = appletvos;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
@@ -442,6 +709,8 @@
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=*]" = "";
 				SDKROOT = appletvos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
@@ -554,7 +823,90 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.oeinc.PongTV;
 				PRODUCT_NAME = Pong;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9B42D6C61D109DA900CFFE39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = "Watch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.oeinc.PongTV.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+			};
+			name = Debug;
+		};
+		9B42D6C71D109DA900CFFE39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				INFOPLIST_FILE = "Watch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.oeinc.PongTV.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+			};
+			name = Release;
+		};
+		9B42D6CA1D109DA900CFFE39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				IBSC_MODULE = Watch_Extension;
+				INFOPLIST_FILE = Watch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oeinc.PongTV.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+			};
+			name = Debug;
+		};
+		9B42D6CB1D109DA900CFFE39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IBSC_MODULE = Watch_Extension;
+				INFOPLIST_FILE = Watch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oeinc.PongTV.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
 			};
 			name = Release;
 		};
@@ -587,6 +939,22 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		9B42D6C51D109DA900CFFE39 /* Build configuration list for PBXNativeTarget "Watch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B42D6C61D109DA900CFFE39 /* Debug */,
+				9B42D6C71D109DA900CFFE39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9B42D6C91D109DA900CFFE39 /* Build configuration list for PBXNativeTarget "Watch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B42D6CA1D109DA900CFFE39 /* Debug */,
+				9B42D6CB1D109DA900CFFE39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

@@ -68,15 +68,15 @@ extension GameViewController {
             gameView.eventsDelegate = self
         #endif
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(GameViewController.handleControllerDidConnectNotification(_:)), name: GCControllerDidConnectNotification, object: nil)
+        NotificationCenter.default().addObserver(self, selector: #selector(GameViewController.handleControllerDidConnectNotification(_:)), name: NSNotification.Name.GCControllerDidConnect, object: nil)
     }
     
-    @objc func handleControllerDidConnectNotification(notification: NSNotification) {
+    @objc func handleControllerDidConnectNotification(_ notification: Notification) {
         let gameController = notification.object as! GCController
         registerCharacterMovementEvents(gameController)
     }
     
-    private func registerCharacterMovementEvents(gameController: GCController) {
+    private func registerCharacterMovementEvents(_ gameController: GCController) {
         
         // An analog movement handler for D-pads and thumbsticks.
         let movementHandler: GCControllerDirectionPadValueChangedHandler = { [unowned self] dpad, _, _ in

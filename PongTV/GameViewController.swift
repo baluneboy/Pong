@@ -29,13 +29,13 @@ class GameViewController: UIViewController {
             //handle possible portrait rendering
             let w: CGFloat = skView.bounds.size.width
             let h: CGFloat = skView.bounds.size.height
-            var sceneSize: CGSize = CGSizeMake(w, h)
+            var sceneSize = CGSize(width: w, height: h)
             if h > w {
-                sceneSize = CGSizeMake(h, w)
+                sceneSize = CGSize(width: h, height: w)
             }
             
             let scene: SKScene = PongScene.init(size: sceneSize, controlStyle: nil)
-            scene.scaleMode = .AspectFit
+            scene.scaleMode = .aspectFit
 
 //            setupGameControllers()
 
@@ -48,10 +48,10 @@ class GameViewController: UIViewController {
     }
     
     override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
-        if UIDevice.currentDevice().userInterfaceIdiom == .Phone {
-            return .AllButUpsideDown
+        if UIDevice.current().userInterfaceIdiom == .phone {
+            return .allButUpsideDown
         } else {
-            return .All
+            return .all
         }
     }
     
