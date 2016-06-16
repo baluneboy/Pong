@@ -10,31 +10,38 @@ import WatchKit
 import Foundation
 import SpriteKit
 
-class InterfaceController: WKInterfaceController {
+class InterfaceController: WKInterfaceController, WKCrownDelegate {
 
     @IBOutlet var skInterface: WKInterfaceSKScene!
     
+    var totalMovement = 0.0
+    let watchPongScene: WatchPongScene = WatchPongScene.init(size: CGSize(width: 640, height: 640), controlStyle: nil) as WatchPongScene
+
     override func awake(withContext context: AnyObject?) {
         super.awake(withContext: context)
-        
-        // Configure interface objects here.
         loadScene()
     }
     
     func loadScene() {
-        let w: CGFloat = 640
-        let h: CGFloat = 640
-        var sceneSize = CGSize(width: w, height: h)
-
-        let scene: SKScene = PongScene.init(size: sceneSize, controlStyle: nil)
-        scene.scaleMode = .aspectFit
-     //   presentScene(scene)
-        skInterface.presentScene(scene)
+        watchPongScene.scaleMode = .aspectFit
+        crownSequencer.delegate = self
+        skInterface.presentScene(watchPongScene)
     }
     
+    func crownDidRotate(_ crownSequencer: WKCrownSequencer?, rotationalDelta: Double)
+    {
+        print(rotationalDelta)
+        totalMovement = min(rotationalDelta, Double(1))
+        watchPongScene.movePaddle1(position: totalMovement)
+    }
+    
+
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+    }
+    override func didAppear() {
+        crownSequencer.focus()
     }
     
     override func didDeactivate() {

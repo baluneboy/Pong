@@ -42,8 +42,6 @@
 		9B42D6AC1D109DA900CFFE39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B42D6AB1D109DA900CFFE39 /* Assets.xcassets */; };
 		9B42D6B31D109DA900CFFE39 /* Watch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9B42D6B21D109DA900CFFE39 /* Watch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9B42D6B81D109DA900CFFE39 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B42D6B71D109DA900CFFE39 /* InterfaceController.swift */; };
-		9B42D6BA1D109DA900CFFE39 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9B42D6B91D109DA900CFFE39 /* GameScene.sks */; };
-		9B42D6BC1D109DA900CFFE39 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B42D6BB1D109DA900CFFE39 /* GameScene.swift */; };
 		9B42D6BE1D109DA900CFFE39 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B42D6BD1D109DA900CFFE39 /* ExtensionDelegate.swift */; };
 		9B42D6C01D109DA900CFFE39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B42D6BF1D109DA900CFFE39 /* Assets.xcassets */; };
 		9B42D6C41D109DA900CFFE39 /* Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 9B42D6A61D109DA900CFFE39 /* Watch.app */; };
@@ -79,7 +77,7 @@
 		9B42D6EC1D109ECE00CFFE39 /* 7.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD2A61C1A17FA0073F969 /* 7.caf */; };
 		9B42D6ED1D109ECE00CFFE39 /* 8.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD2A71C1A17FA0073F969 /* 8.caf */; };
 		9B42D6EE1D109ECE00CFFE39 /* 9.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD2A81C1A17FA0073F969 /* 9.caf */; };
-		9B42D6F21D10A2A100CFFE39 /* PongScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B42D6F11D10A2A100CFFE39 /* PongScene.swift */; };
+		9B42D6F21D10A2A100CFFE39 /* WatchPongScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B42D6F11D10A2A100CFFE39 /* WatchPongScene.swift */; };
 		9B42D6F41D10A6D600CFFE39 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FFE7C7A1C187B370043E721 /* SpriteKit.framework */; };
 		9B5E8FDF1C1A32560097890D /* bedop.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD29B1C1A17FA0073F969 /* bedop.caf */; };
 		9B5E8FE01C1A32560097890D /* gameover.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD2B81C1A18D50073F969 /* gameover.caf */; };
@@ -181,12 +179,10 @@
 		9B42D6AD1D109DA900CFFE39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B42D6B21D109DA900CFFE39 /* Watch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Watch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B42D6B71D109DA900CFFE39 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
-		9B42D6B91D109DA900CFFE39 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		9B42D6BB1D109DA900CFFE39 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		9B42D6BD1D109DA900CFFE39 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		9B42D6BF1D109DA900CFFE39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B42D6C11D109DA900CFFE39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9B42D6F11D10A2A100CFFE39 /* PongScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PongScene.swift; sourceTree = "<group>"; };
+		9B42D6F11D10A2A100CFFE39 /* WatchPongScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchPongScene.swift; sourceTree = "<group>"; };
 		9B7B8DB51C321CEE009FA506 /* GameControls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameControls.swift; sourceTree = "<group>"; };
 		9BA327D51CBDC37700CC7F29 /* GameController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameController.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS9.2.sdk/System/Library/Frameworks/GameController.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
@@ -343,9 +339,7 @@
 			isa = PBXGroup;
 			children = (
 				9B42D6B71D109DA900CFFE39 /* InterfaceController.swift */,
-				9B42D6B91D109DA900CFFE39 /* GameScene.sks */,
-				9B42D6BB1D109DA900CFFE39 /* GameScene.swift */,
-				9B42D6F11D10A2A100CFFE39 /* PongScene.swift */,
+				9B42D6F11D10A2A100CFFE39 /* WatchPongScene.swift */,
 				9B42D6BD1D109DA900CFFE39 /* ExtensionDelegate.swift */,
 				9B42D6BF1D109DA900CFFE39 /* Assets.xcassets */,
 				9B42D6C11D109DA900CFFE39 /* Info.plist */,
@@ -580,7 +574,6 @@
 				9B42D6E41D109ECE00CFFE39 /* bonk.caf in Resources */,
 				9B42D6C01D109DA900CFFE39 /* Assets.xcassets in Resources */,
 				9B42D6E31D109ECE00CFFE39 /* bleep.caf in Resources */,
-				9B42D6BA1D109DA900CFFE39 /* GameScene.sks in Resources */,
 				9B42D6E91D109ECE00CFFE39 /* 4.caf in Resources */,
 				9B42D6E51D109ECE00CFFE39 /* 0.caf in Resources */,
 				9B42D6EB1D109ECE00CFFE39 /* 6.caf in Resources */,
@@ -617,8 +610,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B42D6F21D10A2A100CFFE39 /* PongScene.swift in Sources */,
-				9B42D6BC1D109DA900CFFE39 /* GameScene.swift in Sources */,
+				9B42D6F21D10A2A100CFFE39 /* WatchPongScene.swift in Sources */,
 				9B42D6B81D109DA900CFFE39 /* InterfaceController.swift in Sources */,
 				9B42D6BE1D109DA900CFFE39 /* ExtensionDelegate.swift in Sources */,
 			);
@@ -947,6 +939,7 @@
 				9B42D6C71D109DA900CFFE39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9B42D6C91D109DA900CFFE39 /* Build configuration list for PBXNativeTarget "Watch" */ = {
 			isa = XCConfigurationList;
@@ -955,6 +948,7 @@
 				9B42D6CB1D109DA900CFFE39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

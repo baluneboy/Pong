@@ -10,7 +10,9 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Watch" customModuleProvider="target">
                     <items>
+                        <label width="136" alignment="left" text="PONG" textAlignment="center" id="ARY-Z6-AJi"/>
                         <spriteKitScene alignment="left" scene="Pong" id="ARY-87-yzO"/>
+                        <label width="136" alignment="left" text="PONG" textAlignment="center" id="atU-S6-SKi"/>
                     </items>
                     <connections>
                         <outlet property="skInterface" destination="ARY-87-yzO" id="U6w-Od-uXj"/>

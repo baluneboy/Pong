@@ -1,5 +1,5 @@
 //
-//  PongScene.swift
+//  WatchPongScene.swift
 //  Pong
 //
 //  Created by Jesse Tayler on 6/14/16.
@@ -10,8 +10,9 @@ import Foundation
 import UIKit
 import SceneKit
 import SpriteKit
+import WatchKit
 
-class PongScene: SKScene, SKPhysicsContactDelegate {
+class WatchPongScene: SKScene, SKPhysicsContactDelegate {
     
     let winScore = 21
     
@@ -48,6 +49,8 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
     var gameOverSound: SKAction!
     var serveSound: SKAction!
     
+    
+    
     convenience init(size: CGSize, controlStyle:String!) {
         self.init(size: size)
         
@@ -73,7 +76,7 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
         p2PaddleNode.physicsBody!.isDynamic = false
         addChild(p1PaddleNode)
         addChild(p2PaddleNode)
-        hidePaddles()
+        showPaddles()
         
         //scores
         let fontSize: CGFloat = magicWidth * 6.8
@@ -165,7 +168,7 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
         invalidateTimer()
         serveBall()
         
-        timer = Timer.scheduledTimer(timeInterval: 3.8, target: self, selector: #selector(PongScene.accelerateBall), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 3.8, target: self, selector: #selector(WatchPongScene.accelerateBall), userInfo: nil, repeats: true)
     }
     
     func serveBall() {
@@ -248,7 +251,7 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
         if p1Score == winScore || p2Score == winScore {
             gameOver()
         } else {
-            perform(#selector(PongScene.serve), with: self, afterDelay: 1.68)
+            perform(#selector(WatchPongScene.serve), with: self, afterDelay: 1.68)
         }
         
         drawScore()
@@ -299,6 +302,27 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
     func hidePaddles() {
         p1PaddleNode.isHidden = true
         p2PaddleNode.isHidden = true
+    }
+    
+    func movePaddle1(position:Double) {
+        
+        if !isPlaying {
+            resetGame()
+            serve()
+        }
+
+        let previousLocation = p1PaddleNode.anchorPoint
+        let y = CGFloat(position) * (scene?.frame.height)!
+        let newLocation = CGPoint(x: p1PaddleNode.anchorPoint.x, y: y)
+        movePadde(p1PaddleNode, previousLocation: previousLocation, newLocation: newLocation)
+        movePaddle2(position: position)
+    }
+    
+    func movePaddle2(position:Double) {
+        let previousLocation = p2PaddleNode.anchorPoint
+        let y = CGFloat(position) * (scene?.frame.height)!
+        let newLocation = CGPoint(x: p2PaddleNode.anchorPoint.x, y: y)
+        movePadde(p2PaddleNode, previousLocation: previousLocation, newLocation: newLocation)
     }
     
     func movePadde(_ paddle:SKSpriteNode, previousLocation:CGPoint, newLocation:CGPoint) {
