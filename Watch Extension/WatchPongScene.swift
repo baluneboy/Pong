@@ -14,7 +14,7 @@ import WatchKit
 
 class WatchPongScene: SKScene, SKPhysicsContactDelegate {
     
-    let winScore = 21
+    let winScore = 5
     
     var magicWidth:CGFloat!
     
@@ -54,10 +54,12 @@ class WatchPongScene: SKScene, SKPhysicsContactDelegate {
     convenience init(size: CGSize, controlStyle:String!) {
         self.init(size: size)
         
-        magicWidth = size.width / 70
+        magicWidth = size.width / 48
         setupPhysics()
         setupSoundsa()
         drawUI()
+        hidePaddles()
+
     }
     
     func drawUI() {
@@ -167,7 +169,8 @@ class WatchPongScene: SKScene, SKPhysicsContactDelegate {
         
         invalidateTimer()
         serveBall()
-        
+        showPaddles()
+
         timer = Timer.scheduledTimer(timeInterval: 3.8, target: self, selector: #selector(WatchPongScene.accelerateBall), userInfo: nil, repeats: true)
     }
     
@@ -237,7 +240,7 @@ class WatchPongScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func pointForPlayer(_ player: Int) {
-        ballNode.physicsBody!.velocity = CGVector(dx: 0,dy: 0)
+        ballNode.physicsBody!.velocity = CGVector(dx: 0.0, dy: 0.0)
         
         switch player {
         case 1:
@@ -310,6 +313,10 @@ class WatchPongScene: SKScene, SKPhysicsContactDelegate {
             resetGame()
             serve()
         }
+        if p1PaddleNode.isHidden {
+            return
+        }
+        
 
         let previousLocation = p1PaddleNode.anchorPoint
         let y = CGFloat(position) * (scene?.frame.height)!
@@ -319,6 +326,10 @@ class WatchPongScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func movePaddle2(position:Double) {
+        if p2PaddleNode.isHidden {
+            return
+        }
+
         let previousLocation = p2PaddleNode.anchorPoint
         let y = CGFloat(position) * (scene?.frame.height)!
         let newLocation = CGPoint(x: p2PaddleNode.anchorPoint.x, y: y)

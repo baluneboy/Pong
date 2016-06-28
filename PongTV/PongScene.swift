@@ -13,7 +13,7 @@ import SpriteKit
 
 class PongScene: SKScene, SKPhysicsContactDelegate {
     
-    let winScore = 21
+    let winScore = 5
     
     var magicWidth:CGFloat!
 
