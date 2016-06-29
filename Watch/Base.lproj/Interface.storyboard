@@ -10,8 +10,9 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Watch" customModuleProvider="target">
                     <items>
-                        <spriteKitScene width="1" height="90" alignment="center" verticalAlignment="center" semanticContentAttribute="playback" scene="Pong" id="ARY-87-yzO"/>
+                        <spriteKitScene width="1" height="0.69999999999999996" alignment="center" scene="Pong" id="ARY-87-yzO"/>
                     </items>
+                    <edgeInsets key="margins" left="0.0" right="0.0" top="8" bottom="0.0"/>
                     <connections>
                         <outlet property="skInterface" destination="ARY-87-yzO" id="U6w-Od-uXj"/>
                     </connections>

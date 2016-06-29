@@ -30,7 +30,7 @@ class InterfaceController: WKInterfaceController, WKCrownDelegate {
     
     func crownDidRotate(_ crownSequencer: WKCrownSequencer?, rotationalDelta: Double)
     {
-        print(rotationalDelta)
+//        print(rotationalDelta)
         totalMovement = min(rotationalDelta, Double(1))
         watchPongScene.movePaddle1(position: totalMovement)
     }
