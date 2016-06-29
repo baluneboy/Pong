@@ -9,6 +9,7 @@
 import WatchKit
 import Foundation
 import SpriteKit
+import AVFoundation
 
 class InterfaceController: WKInterfaceController, WKCrownDelegate {
 
@@ -42,6 +43,11 @@ class InterfaceController: WKInterfaceController, WKCrownDelegate {
     }
     override func didAppear() {
         crownSequencer.focus()
+        do {
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+            try AVAudioSession.sharedInstance().setActive(true)
+        } catch {}
+
     }
     
     override func didDeactivate() {
