@@ -41,7 +41,6 @@
 		9B42D6AA1D109DA900CFFE39 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B42D6A81D109DA900CFFE39 /* Interface.storyboard */; };
 		9B42D6AC1D109DA900CFFE39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B42D6AB1D109DA900CFFE39 /* Assets.xcassets */; };
 		9B42D6B31D109DA900CFFE39 /* Watch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9B42D6B21D109DA900CFFE39 /* Watch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		9B42D6B81D109DA900CFFE39 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B42D6B71D109DA900CFFE39 /* InterfaceController.swift */; };
 		9B42D6BE1D109DA900CFFE39 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B42D6BD1D109DA900CFFE39 /* ExtensionDelegate.swift */; };
 		9B42D6C01D109DA900CFFE39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B42D6BF1D109DA900CFFE39 /* Assets.xcassets */; };
 		9B42D6C41D109DA900CFFE39 /* Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 9B42D6A61D109DA900CFFE39 /* Watch.app */; };
@@ -96,6 +95,9 @@
 		9B5E8FED1C1A32560097890D /* 9.caf in Resources */ = {isa = PBXBuildFile; fileRef = 6F0DD2A81C1A17FA0073F969 /* 9.caf */; };
 		9B7B8DB71C321CEE009FA506 /* GameControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7B8DB51C321CEE009FA506 /* GameControls.swift */; };
 		9BA327D61CBDC37700CC7F29 /* GameController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BA327D51CBDC37700CC7F29 /* GameController.framework */; };
+		9BD2E63A1D25B9A100070977 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B42D6B71D109DA900CFFE39 /* InterfaceController.swift */; };
+		9BD2E63C1D25BA1700070977 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BD2E63B1D25BA1700070977 /* AVFoundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		9BD2E63E1D25BA7100070977 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BD2E63D1D25BA7100070977 /* CoreAudio.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -185,6 +187,8 @@
 		9B42D6F11D10A2A100CFFE39 /* WatchPongScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchPongScene.swift; sourceTree = "<group>"; };
 		9B7B8DB51C321CEE009FA506 /* GameControls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameControls.swift; sourceTree = "<group>"; };
 		9BA327D51CBDC37700CC7F29 /* GameController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameController.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS9.2.sdk/System/Library/Frameworks/GameController.framework; sourceTree = DEVELOPER_DIR; };
+		9BD2E63B1D25BA1700070977 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS3.0.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		9BD2E63D1D25BA7100070977 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS3.0.sdk/System/Library/Frameworks/CoreAudio.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +212,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BD2E63E1D25BA7100070977 /* CoreAudio.framework in Frameworks */,
+				9BD2E63C1D25BA1700070977 /* AVFoundation.framework in Frameworks */,
 				9B42D6F41D10A6D600CFFE39 /* SpriteKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -236,6 +242,8 @@
 		6F18BEC91C19C35C00E02B37 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9BD2E63D1D25BA7100070977 /* CoreAudio.framework */,
+				9BD2E63B1D25BA1700070977 /* AVFoundation.framework */,
 				9BA327D51CBDC37700CC7F29 /* GameController.framework */,
 				6FFE7C7A1C187B370043E721 /* SpriteKit.framework */,
 			);
@@ -610,8 +618,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BD2E63A1D25B9A100070977 /* InterfaceController.swift in Sources */,
 				9B42D6F21D10A2A100CFFE39 /* WatchPongScene.swift in Sources */,
-				9B42D6B81D109DA900CFFE39 /* InterfaceController.swift in Sources */,
 				9B42D6BE1D109DA900CFFE39 /* ExtensionDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -38,15 +38,11 @@ class GameViewController: UIViewController {
             let scene: SKScene = PongScene.init(size: sceneSize, controlStyle: nil)
             scene.scaleMode = .aspectFit
             
-            //            setupGameControllers()
+            //setupGameControllers()
             do {
                 try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
                 try AVAudioSession.sharedInstance().setActive(true)
-            } catch {
-                // oh poo.
-            }
-            
-            
+            } catch {}
             
             skView.presentScene(scene)
         }

@@ -10,7 +10,7 @@ import UIKit
 import SpriteKit
 import GameController
 
-class GameViewController: UIViewController {
+class GameViewController: GCEventViewController {
 
     // Game controls
     internal var controllerDPad: GCControllerDirectionPad?
@@ -24,6 +24,8 @@ class GameViewController: UIViewController {
         if let skView: SKView = view as? SKView {
             skView.showsFPS = false
             skView.showsNodeCount = false
+            
+            controllerUserInteractionEnabled = false
             
             scene = PongScene.init(size: skView.bounds.size,controlStyle: nil)
             scene.scaleMode = .aspectFit
