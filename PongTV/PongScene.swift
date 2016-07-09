@@ -65,7 +65,7 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
     
     func marginWidth() -> CGFloat {
         var marginWidth:CGFloat = magicWidth * 2
-        if UIDevice.current().userInterfaceIdiom == .TV {
+        if UIDevice.current().userInterfaceIdiom == .tv {
             marginWidth = 88
         }
         return marginWidth
@@ -115,7 +115,7 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
         
         //        shader.magicWidth = 16.0
         
-        if UIDevice.current().userInterfaceIdiom != .TV {
+        if UIDevice.current().userInterfaceIdiom != .tv {
             p1PaddleNode.shader = tvShader
             p2PaddleNode.shader = tvShader
         }
@@ -230,7 +230,7 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
         
         ballNode = SKSpriteNode.init()
         ballNode.color = SKColor.white()
-        if UIDevice.current().userInterfaceIdiom != .TV {
+        if UIDevice.current().userInterfaceIdiom != .tv {
             ballNode.shader = tvShader
         }
 
@@ -375,7 +375,7 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
     func movePaddle1() {
         let newLocation: CGPoint = p1PaddleTouch.location(in: self)
         if newLocation.x > size.width / 2.0 {
-            if UIDevice.current().userInterfaceIdiom != .TV {
+            if UIDevice.current().userInterfaceIdiom != .tv {
                 return
             }
         }
@@ -386,7 +386,7 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
     func movePaddle2() {
         let newLocation: CGPoint = p2PaddleTouch.location(in: self)
         if newLocation.x < (size.width / 2.0) {
-            if UIDevice.current().userInterfaceIdiom != .TV {
+            if UIDevice.current().userInterfaceIdiom != .tv {
                 return
             }
         }
@@ -557,7 +557,7 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
                 }
             
                 let location: CGPoint = touch.location(in: self)
-                if UIDevice.current().userInterfaceIdiom == .TV {
+                if UIDevice.current().userInterfaceIdiom == .tv {
                     view!.isPaused = false;
                     p1PaddleTouch = touch
                     p2PaddleTouch = touch

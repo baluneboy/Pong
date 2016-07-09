@@ -59,7 +59,6 @@ class WatchPongScene: SKScene, SKPhysicsContactDelegate {
         setupSoundsa()
         drawUI()
         hidePaddles()
-
     }
     
     func drawUI() {
@@ -130,9 +129,21 @@ class WatchPongScene: SKScene, SKPhysicsContactDelegate {
         paddleSound = SKAction.playSoundFileNamed("bleep.caf", waitForCompletion: false)
         
         wallSound = SKAction.playSoundFileNamed("bip.caf", waitForCompletion: false)
-        wallSound1 = SKAction.playSoundFileNamed("bip.caf", waitForCompletion: false)
-        wallSound2 = SKAction.playSoundFileNamed("bip.caf", waitForCompletion: false)
+        wallSound1 = SKAction.playSoundFileNamed("5.caf", waitForCompletion: false)
+        wallSound2 = SKAction.playSoundFileNamed("9.caf", waitForCompletion: false)
     }
+    
+//    var audioFile: WKAudioFileAsset!
+//    var audioItem: WKAudioFilePlayerItem!
+//    var audioPlayer: WKAudioFilePlayer!
+//    
+//    
+//    audioFile = WKAudioFileAsset.init(url: URL(fileURLWithPath: Bundle.main().pathForResource("bedop", ofType: "caf")!))
+//    audioItem = WKAudioFilePlayerItem.init(asset: audioFile)
+//    audioPlayer = WKAudioFilePlayer(playerItem: audioItem)
+//    audioPlayer.play()
+    
+
     
     func setupSoundsa() {
         serveSound = SKAction.playSoundFileNamed("0.caf", waitForCompletion: false)
@@ -256,7 +267,7 @@ class WatchPongScene: SKScene, SKPhysicsContactDelegate {
         } else {
             perform(#selector(WatchPongScene.serve), with: self, afterDelay: 1.68)
         }
-        
+
         drawScore()
     }
     

@@ -35,24 +35,10 @@ class InterfaceController: WKInterfaceController, WKCrownDelegate {
         totalMovement = min(rotationalDelta, Double(1))
         watchPongScene.movePaddle1(position: totalMovement)
     }
-    
 
-    override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
-        super.willActivate()
-    }
     override func didAppear() {
         crownSequencer.focus()
-//        do {
-//            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
-//            try AVAudioSession.sharedInstance().setActive(true)
-//        } catch {}
-
     }
     
-    override func didDeactivate() {
-        // This method is called when watch view controller is no longer visible
-        super.didDeactivate()
-    }
 
 }
