@@ -35,7 +35,7 @@ class GameViewController: UIViewController {
                 sceneSize = CGSize(width: h, height: w)
             }
             
-            let scene: SKScene = PongScene.init(size: sceneSize, controlStyle: nil)
+            let scene: SKScene = PongScene.init(size: sceneSize)
             scene.scaleMode = .aspectFit
             
             //setupGameControllers()
@@ -48,19 +48,19 @@ class GameViewController: UIViewController {
         }
     }
     
-    override func shouldAutorotate() -> Bool {
+    override var shouldAutorotate : Bool {
         return true
     }
     
-    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
-        if UIDevice.current().userInterfaceIdiom == .phone {
+    override var supportedInterfaceOrientations : UIInterfaceOrientationMask {
+        if UIDevice.current.userInterfaceIdiom == .phone {
             return .allButUpsideDown
         } else {
             return .all
         }
     }
     
-    override func prefersStatusBarHidden() -> Bool {
+    override var prefersStatusBarHidden : Bool {
         return true
     }
 }

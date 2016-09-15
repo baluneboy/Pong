@@ -68,7 +68,7 @@ extension GameViewController {
             gameView.eventsDelegate = self
         #endif
         
-        NotificationCenter.default().addObserver(self, selector: #selector(GameViewController.handleControllerDidConnectNotification(_:)), name: NSNotification.Name.GCControllerDidConnect, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(GameViewController.handleControllerDidConnectNotification(_:)), name: NSNotification.Name.GCControllerDidConnect, object: nil)
     }
     
     @objc func handleControllerDidConnectNotification(_ notification: Notification) {

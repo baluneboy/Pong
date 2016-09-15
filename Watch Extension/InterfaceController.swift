@@ -18,7 +18,7 @@ class InterfaceController: WKInterfaceController, WKCrownDelegate {
     var totalMovement = 0.0
     let watchPongScene: WatchPongScene = WatchPongScene.init(size: CGSize(width: 640, height: 640), controlStyle: nil) as WatchPongScene
 
-    override func awake(withContext context: AnyObject?) {
+    override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         loadScene()
     }
@@ -33,7 +33,7 @@ class InterfaceController: WKInterfaceController, WKCrownDelegate {
     {
 //        print(rotationalDelta)
         totalMovement = min(rotationalDelta, Double(1))
-        watchPongScene.movePaddle1(position: totalMovement)
+        watchPongScene.movePaddle1(totalMovement)
     }
 
     override func didAppear() {

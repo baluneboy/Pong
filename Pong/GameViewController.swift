@@ -27,7 +27,7 @@ class GameViewController: GCEventViewController {
             
             controllerUserInteractionEnabled = false
             
-            scene = PongScene.init(size: skView.bounds.size,controlStyle: nil)
+            scene = PongScene.init(size: skView.bounds.size)
             scene.scaleMode = .aspectFit
             skView.presentScene(scene)
             setupGameControllers()

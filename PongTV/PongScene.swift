@@ -39,8 +39,7 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
     var p1Score: Int = 0
     var p2Score: Int = 0
 
-    var timer: Timer!
-    
+//    var timer = Timer.scheduledTimer(timeInterval: 3.8, target: self, selector: #selector(PongScene.accelerateBall), userInfo: nil, repeats: true)
     var wallSound: SKAction!
     var wallSound1: SKAction!
     var wallSound2: SKAction!
@@ -54,18 +53,24 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
     //Why don't shaders work on TV?
     var tvShader = SKShader(fileNamed: "TVShader.fsh")
 
-    convenience init(size: CGSize, controlStyle:String!) {
-        self.init(size: size)
-
-        magicWidth = size.width / 70
-        setupPhysics()
-        setupSoundsa()
-        drawUI()
+    override init(size: CGSize) {
+        super.init(size: size)
+        self.magicWidth = self.size.width / 70
+        self.setupPhysics()
+        self.setupSoundsa()
+        self.drawUI()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func awakeFromNib() {
     }
     
     func marginWidth() -> CGFloat {
         var marginWidth:CGFloat = magicWidth * 2
-        if UIDevice.current().userInterfaceIdiom == .tv {
+        if UIDevice.current.userInterfaceIdiom == .tv {
             marginWidth = 88
         }
         return marginWidth
@@ -77,8 +82,8 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
         let paddleWidth: CGFloat = magicWidth
         let paddleHeight: CGFloat = magicWidth * 8
         
-        p1PaddleNode = SKSpriteNode.init(color: SKColor.white(), size: CGSize(width: paddleWidth, height: paddleHeight))
-        p2PaddleNode = SKSpriteNode.init(color: SKColor.white(), size: CGSize(width: paddleWidth, height: paddleHeight))
+        p1PaddleNode = SKSpriteNode.init(color: SKColor.white, size: CGSize(width: paddleWidth, height: paddleHeight))
+        p2PaddleNode = SKSpriteNode.init(color: SKColor.white, size: CGSize(width: paddleWidth, height: paddleHeight))
         p1PaddleNode.physicsBody = SKPhysicsBody.init(rectangleOf: p1PaddleNode.size)
         p1PaddleNode.physicsBody!.categoryBitMask = ColliderType.paddleCategory.rawValue
         p2PaddleNode.physicsBody = SKPhysicsBody.init(rectangleOf: p2PaddleNode.size)
@@ -95,8 +100,8 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
 
         p1ScoreNode = SKLabelNode.init(fontNamed: font)
         p2ScoreNode = SKLabelNode.init(fontNamed: font)
-        p2ScoreNode.fontColor = SKColor.white()
-        p1ScoreNode.fontColor = SKColor.white()
+        p2ScoreNode.fontColor = SKColor.white
+        p1ScoreNode.fontColor = SKColor.white
                 
         p1ScoreNode.fontSize = fontSize
         p2ScoreNode.fontSize = fontSize
@@ -107,7 +112,7 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
         
         //gameover
         gameOverNode = SKLabelNode.init(fontNamed: font)
-        gameOverNode.fontColor = SKColor.white()
+        gameOverNode.fontColor = SKColor.white
         gameOverNode.fontSize = fontSize
         gameOverNode.position = CGPoint(x: size.width / 2.0, y: size.height / 2.8)
         gameOverNode.text = "GAME OVER"
@@ -115,7 +120,7 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
         
         //        shader.magicWidth = 16.0
         
-        if UIDevice.current().userInterfaceIdiom != .tv {
+        if UIDevice.current.userInterfaceIdiom != .tv {
             p1PaddleNode.shader = tvShader
             p2PaddleNode.shader = tvShader
         }
@@ -150,7 +155,7 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
         let lines: Int = Int((size.height / (2 * lineHeight)))
         var position: CGPoint = CGPoint(x: size.width / 2.0, y: lineHeight * 1.5)
         for _ in 0...lines {
-            let netNode: SKSpriteNode = SKSpriteNode.init(color: SKColor.white(), size: CGSize(width: lineHeight, height: lineHeight))
+            let netNode: SKSpriteNode = SKSpriteNode.init(color: SKColor.white, size: CGSize(width: lineHeight, height: lineHeight))
             netNode.shader = tvShader
             netNode.position = position
             position.y += 2 * lineHeight
@@ -190,7 +195,7 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func setupPhysics() {
-        backgroundColor = SKColor.black()
+        backgroundColor = SKColor.black
         physicsWorld.contactDelegate = self
         physicsWorld.gravity = CGVector(dx: 0, dy: 0)
         
@@ -215,10 +220,10 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
         isPlaying = true
         gameOverNode.isHidden = true
 
-        invalidateTimer()
+//        invalidateTimer()
         serveBall()
         
-        timer = Timer.scheduledTimer(timeInterval: 3.8, target: self, selector: #selector(PongScene.accelerateBall), userInfo: nil, repeats: true)
+//        timer = Timer.scheduledTimer(timeInterval: 3.8, target: self, selector: #selector(PongScene.accelerateBall), userInfo: nil, repeats: true)
     }
     
     func serveBall() {
@@ -229,8 +234,8 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
         let ballRadius: CGFloat = magicWidth / 2
         
         ballNode = SKSpriteNode.init()
-        ballNode.color = SKColor.white()
-        if UIDevice.current().userInterfaceIdiom != .tv {
+        ballNode.color = SKColor.white
+        if UIDevice.current.userInterfaceIdiom != .tv {
             ballNode.shader = tvShader
         }
 
@@ -266,7 +271,7 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
         }
         
         showPaddles()
-        invalidateTimer()
+//        invalidateTimer()
         
         isPlaying = false
         gameOverNode.text = "GAME OVER"
@@ -279,10 +284,7 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func invalidateTimer() {
-        if timer != nil {
-            timer.invalidate()
-        }
-        timer = nil
+//        timer.invalidate()
     }
     
     func drawScore() {
@@ -312,13 +314,13 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func gameOver() {
-        perform(#selector(SCNActionable.run(_:)), with: gameOverSound, afterDelay: 0.38)
+        //perform(#selector(SCNActionable.run(_:)), with: gameOverSound, afterDelay: 0.38)
 
         isPlaying = false
         gameOverNode.text = "GAME OVER"
         gameOverNode.isHidden = false
         
-        invalidateTimer()
+//        invalidateTimer()
         serveBall()
         
         hidePaddles()
@@ -375,7 +377,7 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
     func movePaddle1() {
         let newLocation: CGPoint = p1PaddleTouch.location(in: self)
         if newLocation.x > size.width / 2.0 {
-            if UIDevice.current().userInterfaceIdiom != .tv {
+            if UIDevice.current.userInterfaceIdiom != .tv {
                 return
             }
         }
@@ -386,7 +388,7 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
     func movePaddle2() {
         let newLocation: CGPoint = p2PaddleTouch.location(in: self)
         if newLocation.x < (size.width / 2.0) {
-            if UIDevice.current().userInterfaceIdiom != .tv {
+            if UIDevice.current.userInterfaceIdiom != .tv {
                 return
             }
         }
@@ -557,7 +559,7 @@ class PongScene: SKScene, SKPhysicsContactDelegate {
                 }
             
                 let location: CGPoint = touch.location(in: self)
-                if UIDevice.current().userInterfaceIdiom == .tv {
+                if UIDevice.current.userInterfaceIdiom == .tv {
                     view!.isPaused = false;
                     p1PaddleTouch = touch
                     p2PaddleTouch = touch

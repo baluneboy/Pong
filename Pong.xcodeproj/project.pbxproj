@@ -451,17 +451,20 @@
 					6FFE7C5E1C18773F0043E721 = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = D4V23AZF66;
+						LastSwiftMigration = 0800;
 					};
 					9B42D6A51D109DA900CFFE39 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = D4V23AZF66;
 						DevelopmentTeamName = "Object Enterprises";
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 					9B42D6B11D109DA900CFFE39 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = D4V23AZF66;
 						DevelopmentTeamName = "Object Enterprises";
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -809,6 +812,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.oeinc.PongTV;
 				PRODUCT_NAME = Pong;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -824,6 +828,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.oeinc.PongTV;
 				PRODUCT_NAME = Pong;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

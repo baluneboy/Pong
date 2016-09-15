@@ -67,8 +67,8 @@ class WatchPongScene: SKScene, SKPhysicsContactDelegate {
         let paddleWidth: CGFloat = magicWidth
         let paddleHeight: CGFloat = magicWidth * 8
         
-        p1PaddleNode = SKSpriteNode.init(color: UIColor.white(), size: CGSize(width: paddleWidth, height: paddleHeight))
-        p2PaddleNode = SKSpriteNode.init(color: UIColor.white(), size: CGSize(width: paddleWidth, height: paddleHeight))
+        p1PaddleNode = SKSpriteNode.init(color: SKColor.white, size: CGSize(width: paddleWidth, height: paddleHeight))
+        p2PaddleNode = SKSpriteNode.init(color: SKColor.white, size: CGSize(width: paddleWidth, height: paddleHeight))
         p1PaddleNode.physicsBody = SKPhysicsBody.init(rectangleOf: p1PaddleNode.size)
         p1PaddleNode.physicsBody!.categoryBitMask = ColliderType.paddleCategory.rawValue
         p2PaddleNode.physicsBody = SKPhysicsBody.init(rectangleOf: p2PaddleNode.size)
@@ -85,8 +85,8 @@ class WatchPongScene: SKScene, SKPhysicsContactDelegate {
         
         p1ScoreNode = SKLabelNode.init(fontNamed: font)
         p2ScoreNode = SKLabelNode.init(fontNamed: font)
-        p2ScoreNode.fontColor = UIColor.white()
-        p1ScoreNode.fontColor = UIColor.white()
+        p2ScoreNode.fontColor = SKColor.white
+        p1ScoreNode.fontColor = SKColor.white
         
         p1ScoreNode.fontSize = fontSize
         p2ScoreNode.fontSize = fontSize
@@ -97,7 +97,7 @@ class WatchPongScene: SKScene, SKPhysicsContactDelegate {
         
         //gameover
         gameOverNode = SKLabelNode.init(fontNamed: font)
-        gameOverNode.fontColor = UIColor.white()
+        gameOverNode.fontColor = SKColor.white
         gameOverNode.fontSize = fontSize
         gameOverNode.position = CGPoint(x: size.width / 2.0, y: size.height / 2.8)
         gameOverNode.text = "GAME OVER"
@@ -108,7 +108,7 @@ class WatchPongScene: SKScene, SKPhysicsContactDelegate {
         let lines: Int = Int((size.height / (2 * lineHeight)))
         var position: CGPoint = CGPoint(x: size.width / 2.0, y: lineHeight * 1.5)
         for _ in 0...lines {
-            let netNode: SKSpriteNode = SKSpriteNode.init(color: UIColor.white(), size: CGSize(width: lineHeight, height: lineHeight))
+            let netNode: SKSpriteNode = SKSpriteNode.init(color: SKColor.white, size: CGSize(width: lineHeight, height: lineHeight))
 //            netNode.shader = tvShader
             netNode.position = position
             position.y += 2 * lineHeight
@@ -160,7 +160,7 @@ class WatchPongScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func setupPhysics() {
-        backgroundColor = UIColor.black()
+        backgroundColor = SKColor.black
         physicsWorld.contactDelegate = self
         physicsWorld.gravity = CGVector(dx: 0, dy: 0)
         
@@ -193,7 +193,7 @@ class WatchPongScene: SKScene, SKPhysicsContactDelegate {
         let ballRadius: CGFloat = magicWidth / 2
         
         ballNode = SKSpriteNode.init()
-        ballNode.color = UIColor.white()
+        ballNode.color = SKColor.white
         ballNode.size = CGSize(width: magicWidth, height: magicWidth)
         ballNode.physicsBody = SKPhysicsBody.init(circleOfRadius: ballRadius)
         ballNode.physicsBody!.categoryBitMask = ColliderType.ballCategory.rawValue
@@ -272,7 +272,7 @@ class WatchPongScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func gameOver() {
-        perform(#selector(SCNActionable.run(_:)), with: gameOverSound, afterDelay: 0.38)
+        //perform(#selector(SCNActionable.run(_:)), with: gameOverSound, afterDelay: 0.38)
         
         isPlaying = false
         gameOverNode.text = "GAME OVER"
@@ -318,7 +318,7 @@ class WatchPongScene: SKScene, SKPhysicsContactDelegate {
         p2PaddleNode.isHidden = true
     }
     
-    func movePaddle1(position:Double) {
+    func movePaddle1(_ position:Double) {
         
         if !isPlaying {
             resetGame()
@@ -333,10 +333,10 @@ class WatchPongScene: SKScene, SKPhysicsContactDelegate {
         let y = CGFloat(position) * (scene?.frame.height)!
         let newLocation = CGPoint(x: p1PaddleNode.anchorPoint.x, y: y)
         movePadde(p1PaddleNode, previousLocation: previousLocation, newLocation: newLocation)
-        movePaddle2(position: position)
+        movePaddle2(position)
     }
     
-    func movePaddle2(position:Double) {
+    func movePaddle2(_ position:Double) {
         if p2PaddleNode.isHidden {
             return
         }
